@@ -12,10 +12,6 @@ body {
 }
 
 img {
-    width: 20vw;
-    height: auto;
-    max-height: 40vh;
-    object-fit: cover;
 }
 
 body {
@@ -28,6 +24,13 @@ body {
 
 .img-hover:hover {
     opacity: 0.8;
+}
+
+.prof-img {
+    max-width: 20vw;
+    height: auto;
+    max-height: 40vh;
+    object-fit: cover;
 }
 
 /* Home Page Carousel */
@@ -82,14 +85,14 @@ footer {
 
 /* Responsive Styles */
 
-@media(max-width:991px) {
+/*@media(max-width:991px) {
     .customer-img,
     .img-related {
         margin-bottom: 30px;
     }
-}
+}*/
 
-@media(max-width:767px) {
+/*@media(max-width:767px) {
     .img-portfolio {
         margin-bottom: 15px;
     }
@@ -97,7 +100,9 @@ footer {
     header.carousel .carousel {
         height: 70%;
     }
-}
+}*/
+
+
 .center-cropped {
   width: 100px;
   height: 100px;
