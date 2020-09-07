@@ -1,4 +1,4 @@
-var numSlideShows = 4;
+var numSlideShows = 5;
 var slideIndex = [];
 for (var i = 0; i < numSlideShows; i++) {
   slideIndex[i] = 1;
