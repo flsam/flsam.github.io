@@ -1,6 +1,7 @@
 var numSlideShows = 5;
 var slideIndex = [];
-for (var i = 0; i < numSlideShows; i++) {
+var offset = 4;
+for (var i = offset; i < numSlideShows; i++) {
   slideIndex[i] = 1;
   showDivs(i, slideIndex[i]);
 }
