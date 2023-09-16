@@ -1,73 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Florida Student Association of Mathematics</title>
-	<link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/>
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/modern-business.css" rel="stylesheet">
-	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-</head>
-
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="https://flsam.org/index.html">FLSAM </a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<a href="../index.html">Home</a>
-					</li>
-					 <li>
-						<a href = "https://discord.gg/c8AfFP5e25">Discord</a>
-		    			</li>
-					<li>
-						<a href="../meetings/index.html">Meetings</a>
-					</li>
-					<li>
-						<a href="../gallery/index.html">Gallery</a>
-					</li>
-					<li class="active">
-						<a href="../downloads/index.html">Downloads</a>
-					</li>
-					<li>
-						<a href="../officers/index.html">Officers</a>
-					</li>
-					<li>
-						<a href="../competitions/index.html">Competitions</a>
-					</li>
-					<li>
-						<a href="../results/index.html">Results</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header"> Downloads </h1>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-12">
-			Here are some of the tests from tryouts (ARML, PUMaC, HMMT) and events (Spooky Halloween contest, FLOMO) that FLSAM has organized in the past few years. The Spooky Halloween contest is a fun contest around mid-AIME level. FLOMO is a 50 short-answer team contest from Mathcounts level to mid-AIME. To get each year’s test, simply find the year in the dropdown menu, click on it, and click on the specific test within the result box. 
-			</div>	
-		</div> <hr>
-		<head>
-			<style>
-    		/* Style the dropdown */
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Florida Student Association of Mathematics</title>
+    <link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/modern-business.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    
+    <style>
+        /* Style the dropdown */
         select {
             padding: 10px;
             border: 2px solid #08D44C;
@@ -78,7 +24,6 @@
 
         /* Style the text boxes */
         .textbox {
-            display: none;
             padding: 20px;
             border: 2px solid #ccc;
             border-radius: 10px;
@@ -103,20 +48,126 @@
         /* Style hyperlinks */
         .textbox a {
             color: #08D44C;
-}
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center">Select a Year:</h1>
-    <select id="dropdown">
-        <option value="option1">2023 Downloads</option>
-        <option value="option2">2022 Downloads</option>
-        <option value="option3">2021 Downloads</option>
-        <option value="option4">2020 Downloads</option>
-        <option value="option5">2019 Downloads</option>
-        <option value="option6">2018 Downloads</option>
-    </select>
-    <div id="textbox-container">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://flsam.org/index.html">FLSAM</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/c8AfFP5e25">Discord</a>
+                    </li>
+                    <li>
+                        <a href="../meetings/index.html">Meetings</a>
+                    </li>
+                    <li>
+                        <a href="../gallery/index.html">Gallery</a>
+                    </li>
+                    <li class="active">
+                        <a href="../downloads/index.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="../officers/index.html">Officers</a>
+                    </li>
+                    <li>
+                        <a href="../competitions/index.html">Competitions</a>
+                    </li>
+                    <li>
+                        <a href="../results/index.html">Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Downloads</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                Here are some of the tests from tryouts (ARML, PUMaC, HMMT) and events (Spooky Halloween contest, FLOMO) that FLSAM has organized in the past few years. The Spooky Halloween contest is a fun contest around mid-AIME level. FLOMO is a 50 short-answer team contest from Mathcounts level to mid-AIME. To get each year’s test, simply find the year in the dropdown menu, click on it, and click on the specific test within the result box.
+            </div>
+        </div>
+        <hr>
+        <h1 style="text-align:center">Select a Year:</h1>
+        <select id="dropdown">
+            <option value="option1">2023 Downloads</option>
+            <option value="option2">2022 Downloads</option>
+            <option value="option3">2021 Downloads</option>
+            <option value="option4">2020 Downloads</option>
+            <option value="option5">2019 Downloads</option>
+            <option value="option6">2018 Downloads</option>
+        </select>
+        <div id="textbox-container">
+            <div id="option1-textbox" class="textbox">
+                <div class="title">2023 Downloads</div>
+                <hr class="line">
+                <div class="col-lg-12">
+                    <p>2023 HMMT/CMIMC/PUMAC Tryout: <a href="https://drive.google.com/file/d/1lZ5lnRHvZEVqIPkLY11rAw5K6m4OIre3/view?usp=drive_link" target="_blank">Geometry</a>, <a href="https://drive.google.com/file/d/12uQGHctPQ4gfMEDrB8hDkCZtCbDXOOfB/view?usp=drive_link" target="_blank">Algebra/Number Theory</a>, <a href="https://drive.google.com/file/d/1HzpozqVPSAU67Pe4r0GNoXg7tfetIT_E/view?usp=sharing" target="_blank">Combinatorics</a>, <a href="https://drive.google.com/file/d/1WFFSHQZZKkS1nlUJf_TyiJPvOJHpcPSU/view?usp=drive_link" target="_blank">Solutions</a></p>
+                    <p>2023 FLOMO: <a href="https://drive.google.com/file/d/10TT4opGv9CM7gkdiS4CLIFYShVNi6hwK/view?usp=drive_link" target="_blank">Problems</a>, <a href="https://drive.google.com/file/d/1_kkCGKDEztg2N9XqGkKP95_jwjdfMHBu/view?usp=drive_link" target="_blank">Answers</a>, <a href="https://drive.google.com/file/d/19BjoQsKzthlBCnWou3rcBWfoGUFjalgD/view?usp=drive_link" target="_blank">Solutions</a></p>
+                    <p>2023 Spooky Halloween Contest: <a href="https://drive.google.com/file/d/1pG-XCFi_XSM8O9mYOZwRODqbOn_KNos2/view?usp=drive_link" target="_blank">Indiv Problems</a>, <a href="https://drive.google.com/file/d/1SXpGB8kn0GFEl-TIhD4b_5jYkklDp8K6/view?usp=drive_link" target="_blank">Indiv Solutions</a>, <a href="https://drive.google.com/file/d/1r2Khig46gG7GzFq_QAqMw-Tp7gs66jWc/view?usp=drive_link" target="_blank">Team Problems</a>, <a href="https://drive.google.com/file/d/1yU8dHpbWVeGrgKibR_Hnx4lOccaPTWOo/view?usp=drive_link" target="_blank">Team Solutions</a>, <a href="https://drive.google.com/file/d/18DEmKyl_FYYqr1vMbPbe48e4PN-v7E7K/view?usp=drive_link" target="_blank">Boss Fight Problems</a>, <a href="https://drive.google.com/file/d/13RGlCDuuOuQpcZ6pzQzOGC2KW5E-5Co1/view?usp=drive_link" target="_blank">Boss Fight Solutions</a></p>
+                    <p>2023 Intro Meeting: <a href="https://drive.google.com/file/d/1S45LnpKhLUWMqGj6wLqH4aGKoOeYVt_9/view?usp=drive_link" target="_blank">Problems</a>, <a href="https://drive.google.com/file/d/1mfpLYjJ08fHbaSobtmbEbThX4FMSWmqa/view?usp=drive_link" target="_blank">Solutions</a></p>
+                </div>
+            </div>
+            <div id="option2-textbox" class="textbox">
+                <div class="title"> 2022 Downloads</div>
+                <hr class="line">
+                <div>
+                    <p>2022 ARML Tryouts: <a href="https://drive.google.com/file/d/1P6_TWv9JT9RO0xNn0EErf_6KbzokxbnD/view?usp=drive_link" target="_blank">Problems</a>, <a href="https://drive.google.com/file/d/1_8qAZ4w51933QW6tG01RHONRhfXCxmY1/view?usp=drive_link" target="_blank">Solutions</a> </p>
+                    <p>2022 HMMT/CMIMC/PUMAC Tryout: <a href="https://drive.google.com/file/d/1fm3XO1o2SHuAtygBcBdV7OgA7z3snzFU/view?usp=drive_link" target="_blank">Geometry</a>, <a href="https://drive.google.com/file/d/1kqKPe6hHTMoTBEYbVIv9hMPORZGfQl6v/view?usp=drive_link" target="_blank">Algebra/Number Theory</a>, <a href="https://drive.google.com/file/d/1agg1_2MBacU3lSqpSPklnurnvOfU7U7K/view?usp=drive_link" target="_blank">Combinatorics</a>, <a href="https://drive.google.com/file/d/19Nc3rsYYzilQEGqQvTj6IiwHKwVSTy42/view?usp=drive_link" target="_blank">Solutions</a> </p>
+                </div>
+            </div>
+            <div id="option3-textbox" class="textbox">
+                <div class="title">2021 Downloads</div>
+                <hr class="line">
+                <div>
+                    <p>2021 Intro Meeting: <a href="https://drive.google.com/file/d/1DpEa8I4ZJhf_mOyWWVupi6tonULF-ieE/view?usp=drive_link" target="_blank">Relay</a>,  <a href="https://drive.google.com/file/d/1vJtdEt2CHsifSsYTSkRPUoNLqfNkk8o_/view?usp=drive_link" target="_blank">Team</a></p>
+                </div>
+            </div>
+            <div id="option4-textbox" class="textbox">
+                <div class="title">2020 Downloads</div>
+                <hr class="line">
+                <div>
+                    <p>2020 <a href="https://drive.google.com/file/d/1L1yTmF1h2fCt-3d2NIpbnxXTQ3U6Vp1f/view?usp=drive_link" target="_blank">FLOMO</a></p>
+                    <p>2020 <a href="https://drive.google.com/file/d/1f0biRLhYj5EpAXsbAR8z_nFCTtfrV590/view?usp=drive_link" target="_blank">Spooky Halloween Contest</a></p>
+                </div>
+            </div>
+            <div id="option5-textbox" class="textbox">
+                <div class="title">2019 Downloads</div>
+                <hr class="line">
+                <div>
+                    <p>2019 Intro Meeting: <a href="https://drive.google.com/file/d/138gc_6_8gaD1FNu8nENf5mFaaT08UDYp/view?usp=drive_link" target="_blank">Relay</a>, <a href="https://drive.google.com/file/d/1lp8qjbmExe5CMrM-NpEfgt2jqw1PUWoM/view?usp=drive_link" target="_blank">Team</a></p>
+                    <p>2019: <a href="https://drive.google.com/file/d/19PdlYFavvYQndqCH2NhJGxkrTYOQrBHD/view?usp=drive_link" target="_blank">ARML Tryout</a></p>
+                    <p>2019 HMMT/CMIMC Tryout: <a href="https://drive.google.com/file/d/1FRZfzEUcnPqtbkIgCGP7RynTzbwVv4KF/view?usp=drive_link" target="_blank">Geometry</a>, <a href="https://drive.google.com/file/d/1NiJ6i0zzKTCbyzlK49-wxbvPkW7wWi45/view?usp=drive_linkf" target="_blank">Algebra/Number Theory</a>, <a href="https://drive.google.com/file/d/1C3jOG8DXbcLTGajc0URte4YaLXjLy0t1/view?usp=drive_link" target="_blank">Combinatorics</a></p>
+                </div>
+            </div>
+            <div id="option6-textbox" class="textbox">
+                <div class="title">2018 Downloads</div>
+                <hr class="line">
+                <div>
+                    <p>2018: <a href="https://drive.google.com/file/d/1airLUV-2CeEbqVn76OfQofgFfWcI6oBV/view?usp=drive_link" target="_blank">Spooky Halloween Contest</a></p>
+                    <p>2018: <a href="https://drive.google.com/file/d/1cXAU22R2oqeAHBsDiMs9g5MYxzt4rrTf/view?usp=drive_link" target="_blank">PUMaC Tryout</a> </p>
+                    <p>2018 Intro Meeting: <a href="https://drive.google.com/file/d/1njlnzpPQA6JJetfSFOP6NhjMwuNSu2z_/view?usp=drive_link" target="_blank">Team</a>, <a href="https://drive.google.com/file/d/1GsUni1grjk_sf5lYJe6wSPVnG298IlAk/view?usp=drive_link" target="_blank">Guts</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -145,76 +196,5 @@
             showSelectedTextbox();
         });
     </script>
-    <div id="textbox-container">
-        <div id="option1-textbox" class="textbox">
-            <div class="title">2023 Downloads</div>
-            <hr class="line">
-                <div class="col-lg-12">
-                    <p>2023 HMMT/CMIMC/PUMAC Tryout: <a href="https://drive.google.com/file/d/1lZ5lnRHvZEVqIPkLY11rAw5K6m4OIre3/view?usp=drive_link" target="_blank">Geometry</a>, <a href = "https://drive.google.com/file/d/12uQGHctPQ4gfMEDrB8hDkCZtCbDXOOfB/view?usp=drive_link" target="_blank">Algebra/Number Theory</a>, <a href = "https://drive.google.com/file/d/1HzpozqVPSAU67Pe4r0GNoXg7tfetIT_E/view?usp=sharing" target="_blank">Combinatorics</a>, <a href = "https://drive.google.com/file/d/1WFFSHQZZKkS1nlUJf_TyiJPvOJHpcPSU/view?usp=drive_link" target = "_blank">Solutions</a></p>
-                    <p>2023 FLOMO: <a href = "https://drive.google.com/file/d/10TT4opGv9CM7gkdiS4CLIFYShVNi6hwK/view?usp=drive_link"  target="_blank">Problems</a>, <a href = "https://drive.google.com/file/d/1_kkCGKDEztg2N9XqGkKP95_jwjdfMHBu/view?usp=drive_link"  target="_blank">Answers</a>, <a href = "https://drive.google.com/file/d/19BjoQsKzthlBCnWou3rcBWfoGUFjalgD/view?usp=drive_link"  target="_blank">Solutions</a></p>
-                    <p>2023 Spooky Halloween Contest: <a href = "https://drive.google.com/file/d/1pG-XCFi_XSM8O9mYOZwRODqbOn_KNos2/view?usp=drive_link"  target="_blank">Indiv Problems</a>, <a href = "https://drive.google.com/file/d/1SXpGB8kn0GFEl-TIhD4b_5jYkklDp8K6/view?usp=drive_link"  target="_blank">Indiv Solutions</a>, <a href = "https://drive.google.com/file/d/1r2Khig46gG7GzFq_QAqMw-Tp7gs66jWc/view?usp=drive_link"  target="_blank">Team Problems</a>, <a href = "https://drive.google.com/file/d/1yU8dHpbWVeGrgKibR_Hnx4lOccaPTWOo/view?usp=drive_link"  target="_blank">Team Solutions</a>, <a href = "https://drive.google.com/file/d/18DEmKyl_FYYqr1vMbPbe48e4PN-v7E7K/view?usp=drive_link"  target="_blank">Boss Fight Problems</a>, <a href = "https://drive.google.com/file/d/13RGlCDuuOuQpcZ6pzQzOGC2KW5E-5Co1/view?usp=drive_link"  target="_blank">Boss Fight Solutions</a></p>
-                    <p>2023 Intro Meeting: <a href = "https://drive.google.com/file/d/1S45LnpKhLUWMqGj6wLqH4aGKoOeYVt_9/view?usp=drive_link"  target="_blank">Problems</a>, <a href = "https://drive.google.com/file/d/1mfpLYjJ08fHbaSobtmbEbThX4FMSWmqa/view?usp=drive_link"  target="_blank">Solutions</a></p>
-                </div>
-            </div>
-        </div>
-        <div id="option2-textbox" class="textbox">
-            <div class="title"> 2022 Downloads</div>
-            <hr class="line">
-            <div>
-                <p>2022 ARML Tryouts: <a href = "https://drive.google.com/file/d/1P6_TWv9JT9RO0xNn0EErf_6KbzokxbnD/view?usp=drive_link"  target="_blank">Problems</a>, <a href = "https://drive.google.com/file/d/1_8qAZ4w51933QW6tG01RHONRhfXCxmY1/view?usp=drive_link"  target="_blank">Solutions</a> </p>
-                <p>2022 HMMT/CMIMC/PUMAC Tryout: <a href = "https://drive.google.com/file/d/1fm3XO1o2SHuAtygBcBdV7OgA7z3snzFU/view?usp=drive_link" target="_blank">Geometry</a>, <a href = "https://drive.google.com/file/d/1kqKPe6hHTMoTBEYbVIv9hMPORZGfQl6v/view?usp=drive_link" target="_blank">Algebra/Number Theory</a>, <a href = "https://drive.google.com/file/d/1agg1_2MBacU3lSqpSPklnurnvOfU7U7K/view?usp=drive_link" target="_blank">Combinatorics</a>, <a href = "https://drive.google.com/file/d/19Nc3rsYYzilQEGqQvTj6IiwHKwVSTy42/view?usp=drive_link" target = "_blank">Solutions</a> </p>
-                <p>
-            </div>
-        </div>
-        <div id="option3-textbox" class="textbox">
-            <div class="title">2021 Downloads</div>
-            <hr class="line">
-            <div>
-                <p>2021 Intro Meeting: <a href = "https://drive.google.com/file/d/1DpEa8I4ZJhf_mOyWWVupi6tonULF-ieE/view?usp=drive_link" target="_blank">Relay</a>,  <a href = "https://drive.google.com/file/d/1vJtdEt2CHsifSsYTSkRPUoNLqfNkk8o_/view?usp=drive_link" target="_blank">Team</a></p>
-            </div>
-        </div>
-        <div id="option4-textbox" class="textbox">
-            <div class="title">2020 Downloads</div>
-            <hr class="line">
-            <div>
-                <p>2020 <a href = "https://drive.google.com/file/d/1L1yTmF1h2fCt-3d2NIpbnxXTQ3U6Vp1f/view?usp=drive_link" target="_blank">FLOMO</a></p>
-                <p>2020 <a href = "https://drive.google.com/file/d/1f0biRLhYj5EpAXsbAR8z_nFCTtfrV590/view?usp=drive_link" target="_blank">Spooky Halloween Contest</a></p>
-            </div>
-        </div>
-        <div id="option5-textbox" class="textbox">
-            <div class="title">2019 Downloads</div>
-            <hr class="line">
-            <div>
-                <p>2019 Intro Meeting: <a href = "https://drive.google.com/file/d/138gc_6_8gaD1FNu8nENf5mFaaT08UDYp/view?usp=drive_link" target="_blank">Relay</a>, <a href = "https://drive.google.com/file/d/1lp8qjbmExe5CMrM-NpEfgt2jqw1PUWoM/view?usp=drive_link" target="_blank">Team</a></p>
-                <p>2019: <a href = "https://drive.google.com/file/d/19PdlYFavvYQndqCH2NhJGxkrTYOQrBHD/view?usp=drive_link" target="_blank"> ARML Tryout</a></p>
-                <p>2019 HMMT/CMIMC Tryout: <a href = "https://drive.google.com/file/d/1FRZfzEUcnPqtbkIgCGP7RynTzbwVv4KF/view?usp=drive_link" target="_blank">Geometry</a>, <a href = "https://drive.google.com/file/d/1NiJ6i0zzKTCbyzlK49-wxbvPkW7wWi45/view?usp=drive_linkf" target="_blank">Algebra/Number Theory</a>, <a href = "https://drive.google.com/file/d/1C3jOG8DXbcLTGajc0URte4YaLXjLy0t1/view?usp=drive_link" target="_blank">Combinatorics</a></p>
-            </div>
-        </div>
-        <div id="option6-textbox" class="textbox">
-            <div class="title">2018 Downloads</div>
-            <hr class="line">
-            <div>
-                <p>2018: <a href = "https://drive.google.com/file/d/1airLUV-2CeEbqVn76OfQofgFfWcI6oBV/view?usp=drive_link" target="_blank">Spooky Halloween Contest</a></p>
-                <p>2018: <a href = "https://drive.google.com/file/d/1cXAU22R2oqeAHBsDiMs9g5MYxzt4rrTf/view?usp=drive_link" target="_blank">PUMaC Tryout</a> </p>
-                <p>2018 Intro Meeting: <a href = "https://drive.google.com/file/d/1njlnzpPQA6JJetfSFOP6NhjMwuNSu2z_/view?usp=drive_link" target="_blank">Team</a>, <a href = "https://drive.google.com/file/d/1GsUni1grjk_sf5lYJe6wSPVnG298IlAk/view?usp=drive_link" target="_blank">Guts</a></p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const dropdown = document.getElementById('dropdown');
-        const textboxContainer = document.getElementById('textbox-container');
-
-        dropdown.addEventListener('change', () => {
-            // Hide all text boxes
-            const textboxes = document.querySelectorAll('.textbox');
-            textboxes.forEach((textbox) => {
-                textbox.style.display = 'none';
-            });
-
-            // Show the selected text box
-            const selectedOption = dropdown.value;
-            const selectedTextbox = document.getElementById(selectedOption + '-textbox');
-            selectedTextbox.style.display = 'block';
-        });
-    </script>
+</body>
+</html>
