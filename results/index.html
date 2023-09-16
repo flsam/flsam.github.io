@@ -99,6 +99,12 @@
             margin-top: 10px;
         }
     </style>
+			    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Results</h1>
+            </div>
+        </div>
 </head>
 <body>
     <h1 style="text-align:center">Select an Competition:</h1>
@@ -110,36 +116,7 @@
         <option value="option5">2021 PUMaC</option>
         <option value="option6">2021 HMMT</option>
     </select>
-    <div id="textbox-container">
-        <!-- ... (rest of your content remains unchanged) ... -->
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdown = document.getElementById('dropdown');
-            const textboxContainer = document.getElementById('textbox-container');
-
-            // Function to show the selected text box
-            function showSelectedTextbox() {
-                // Hide all text boxes
-                const textboxes = document.querySelectorAll('.textbox');
-                textboxes.forEach((textbox) => {
-                    textbox.style.display = 'none';
-                });
-
-                // Show the selected text box
-                const selectedOption = dropdown.value;
-                const selectedTextbox = document.getElementById(selectedOption + '-textbox');
-                selectedTextbox.style.display = 'block';
-            }
-
-            // Add an event listener for the dropdown change event
-            dropdown.addEventListener('change', showSelectedTextbox);
-
-            // Trigger the change event initially to display the default content
-            showSelectedTextbox();
-        });
-    </script>
+	
     <div id="textbox-container">
         <div id="option1-textbox" class="textbox">
             <div class="title" style= "color:#08D44C">2023 PUMaC</div>
