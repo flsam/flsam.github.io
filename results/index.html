@@ -53,166 +53,212 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<h1 class="page-header"> Results </h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2023 PUMaC</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Congratulations to the one Florida team who competed at PUMaC! Here's how they did: 
-				</p>
-				<h5>Team Awards (Division A)</h5>
+	    <style>
+        /* Set the font family for the entire page */
+        body {
+            font-family: "Avenir Black", sans-serif;
+        }
+
+        /* Style the dropdown */
+        select {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        /* Style the text boxes */
+        .textbox {
+            display: none;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: #fff;
+        }
+
+        /* Style the title */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Style the horizontal line */
+        .line {
+            border-width: 10px solid #0000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Select an Competition:</h1>
+    <select id="dropdown">
+        <option value="option1">2023 PUMaC</option>
+        <option value="option2">2023 CMIMC</option>
+        <option value="option3">2023 HMMT</option>
+        <option value="option4">2022 ARML</option>
+        <option value="option5">2021 PUMaC</option>
+        <option value="option6">2021 HMMT</option>
+    </select>
+    <div id="textbox-container">
+        <!-- ... (rest of your content remains unchanged) ... -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.getElementById('dropdown');
+            const textboxContainer = document.getElementById('textbox-container');
+
+            // Function to show the selected text box
+            function showSelectedTextbox() {
+                // Hide all text boxes
+                const textboxes = document.querySelectorAll('.textbox');
+                textboxes.forEach((textbox) => {
+                    textbox.style.display = 'none';
+                });
+
+                // Show the selected text box
+                const selectedOption = dropdown.value;
+                const selectedTextbox = document.getElementById(selectedOption + '-textbox');
+                selectedTextbox.style.display = 'block';
+            }
+
+            // Add an event listener for the dropdown change event
+            dropdown.addEventListener('change', showSelectedTextbox);
+
+            // Trigger the change event initially to display the default content
+            showSelectedTextbox();
+        });
+    </script>
+    <div id="textbox-container">
+        <div id="option1-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C">2023 PUMaC</div>
+            <hr class="line">
+            <div>Congratulations to the one Florida team who competed at PUMaC! Here's how they did:
+                <p>Team Awards (Division A)</p>
 				<ul>
 					<li>Overall: Florida A placed 14th</li>
 					<li>Power round: Florida A placed 16th </li>
 				</ul>
-				<h5>Individual Awards (Division A)</h5>
+				Individual Awards (Division A)
 				<ul>
 					<li>Overall Individual: Aaron Hu - 4th place</li>
 					<li>Algebra: Aaron Hu - 1st place, William Li - 24th place</li>
 					<li>Geometry: Aaron Hu - 3rd place</li>
 					<li>Number Theory: Rui Jiang - 25th place</li>
 				</ul>
-				
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2023 CMIMC</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Congratulations to the three teams that competed at CMIMC! Here's how they did: 
-				</p>
-				<h5>Team Awards</h5>
+            </div>
+        </div>
+        <div id="option2-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C"> 2023 CMIMC</div>
+            <hr class="line">
+            <div>Congratulations to the three teams that competed at CMIMC! Here's how they did:
+                <p>Team Awards</p>
 				<ul>
 					<li>Overall: Florida A: 3rd, Florida B: 25th, Florida C: 40th</li>
-					<li>TCS: Florda A: 14th, Florida B: 47th, Florida C: 55th </li>
-					<li>Team Round: Florida A: 5th, Florida B: 27th place, Florida C: 40th Place</li>
+                    <li>TCS: Florda A: 14th, Florida B: 47th, Florida C: 55th</li>
+                    <li>Team Round: Florida A: 5th, Florida B: 27th place, Florida C: 40th Place</li>
 				</ul>
-				<h5>Individual Awards</h5>
+				Individual Awards
 				<ul>
 					<li>Overall Individual: Karthik Vedula - 5th place, Aaron Hu - 12th place, Kevin Liu - 16th place</li>
 					<li>Algebra/NT: Kevin Liu - 11th place, Aaron Hu - 13th place, Karthik Vedula - 15th place, Tom Zhang - 39th place</li>
 					<li>Geometry: Karthik Vedula - 2nd place, Aaron Hu - 29th place, Yuhan Niu - 40th place, Alexander Li - 48th place, Aaryan Vaishya - 49th place</li>
 					<li>Combinatorics: Kevin Liu - 19th place, Aaron Hu - 23th place, Karthik Vedula - 34th place</li>
 				</ul>
-				
-
-			</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2023 HMMT</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Congratulations to the one team that competed at HMMT! Here's how they did: 
-				</p>
-				<h5>Team Awards</h5>
+            </div>
+        </div>
+        <div id="option3-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C">2023 HMMT</div>
+            <hr class="line">
+            <div>Congratulations to the one team that competed at HMMT! Here's how they did:
+                <p>Team Awards</p>
 				<ul>
 					<li>Sweepstakes: 10th place</li>
-					<li>Guts: 4th place </li>
-					<li>Team Round: 16th place</li>
+                    <li>Guts: 4th place</li>
+                    <li>Team Round: 16th place</li>
 				</ul>
-				<h5>Individual Awards</h5>
+				Individual Awards
 				<ul>
 					<li>Overall Individual: Jessica Wan - 4th place, Alex Li - 17th place, Karthik Vedula - 33rd place</li>
 					<li>Algebra/NT: Karthik Vedula - 1st place, Jessica Wan - 4th place, Aaron Hu - 49th place</li>
 					<li>Geometry: Alex Li - 27th place</li>
 					<li>Combinatorics: Jessica Wan - 2nd place, Alex Li - 5th place</li>
 				</ul>
-				
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2022 ARML</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Two Florida Alligator teams competed offsite at the 2022 ARML! Some of their results included:  
-				</p>
-				<h5>Team Awards (Division A)</h5>
+            </div>
+        </div>
+        <div id="option4-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C">2022 ARML</div>
+            <hr class="line">
+            <div>Two Florida Alligator teams competed offsite at the 2022 ARML! Some of their results included:
+                <p>Team Awards (Division A)</p>
 				<ul>
 					<li>Overall: Florida A placed 4th</li>
-					<li>Overall: Florida B placed 13th</li>
-
+                    <li>Overall: Florida B placed 13th</li>
 				</ul>
-				<h5>Individual Awards (Division A)</h5>
+				Individual Awards (Division A)
 				<ul>
-					<li> Kevin Liu placed 3rd winning a $1000 prize! </li>
-					<li> Albert Wang placed 8th winning a $500 prize! </li>
-
+					<li>Kevin Liu placed 3rd winning a $1000 prize!</li>
+					<li>Albert Wang placed 8th winning a $500 prize!</li>
 				</ul>
-				
-
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2021 PUMaC</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Congratulations to the two Florida teams who competed at PUMaC! Here's how they did: 
-				</p>
-				<h5>Team Awards (Division A)</h5>
+            </div>
+        </div>
+        <div id="option5-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C">2021 PUMaC</div>
+            <hr class="line">
+            <div>Congratulations to the two Florida teams who competed at PUMaC! Here's how they did: 
+                <p>Team Awards (Division A)</p>
 				<ul>
 					<li>Overall: Florida A placed 14th</li>
-					<li>Power round: Florida A placed 20th </li>
-					<li>Team round: Florida A placed 5th and Florida B placed 25th </li>
+                    <li>Power round: Florida A placed 20th</li>
+                    <li>Team round: Florida A placed 5th and Florida B placed 25th</li>
 				</ul>
-				<h5>Individual Awards (Division A)</h5>
+				Individual Awards (Division A)
 				<ul>
 					<li>Overall: Karthik Vedula placed 7th, Divij Lankalapalli placed 51st, and Charley Cheng placed 68th</li>
 					<li>Algebra: Divij Lankalapalli placed 6th</li>
-					<li>Geometry: Karthik Vedula placed 2nd, and Albert Wang placed 27th</li>
-					<li>Combinatorics: Charley Cheng placed 9th, Albert Wang placed 17th, and Aaron Hu placed 19th</li>
+                    <li>Geometry: Karthik Vedula placed 2nd, and Albert Wang placed 27th</li>
+                    <li>Combinatorics: Charley Cheng placed 9th, Albert Wang placed 17th, and Aaron Hu placed 19th</li>
 				</ul>
-				
-
-			</div>
-		</div>
-			
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">2021 HMMT</h3>
-			</div>
-			<div class="col-md-6">
-				<p>
-				Congratulations to the Florida Alligators who competed at HMMT! Here are their accomplishments: 
-				</p>
-				<h5>Overall Awards</h5>
+            </div>
+        </div>
+        <div id="option6-textbox" class="textbox">
+            <div class="title" style= "color:#08D44C">2021 HMMT</div>
+            <hr class="line">
+            <div>Congratulations to the Florida Alligators who competed at HMMT! Here are their accomplishments:              
+                 <p>Overall Awards</p>
 				<ul>
-					<li>Overall: 8th place out of 100 </li>
-					<li>Team Round: 8th place</li>
-					<li>Guts Round: 10th place</li>
+					<li>Overall: 8th place out of 100</li>
+                    <li>Team Round: 8th place</li>
+                    <li>Guts Round: 10th place</li>
 				</ul>
-				<h5>Individual Awards</h5>
+				Individual Awards
 				<ul>
 					<li>Overall: Jessica Wan placed 9th, Vismay Sharan placed 24th, and Karthik Vedula placed 40th</li>
 					<li>Algebra/Number Theory: Jessica placed 9th, and Vismay placed 15th</li>
-					<li>Geometry: Jessica & Karthik placed 4th, and Vismay placed 28th</li>
-					<li>Combinatorics: Jaedon Whyte placed 23rd, and Jessica placed 33rd</li>
+                    <li>Geometry: Jessica & Karthik placed 4th, and Vismay placed 28th</li>
+                    <li>Combinatorics: Jaedon Whyte placed 23rd, and Jessica placed 33rd</li>
 				</ul>
-				
+            </div>
+        </div>
+    </div>
 
-			</div>
-		</div>
-		
-		<hr>
-		
-	
-	</div>
-	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-</body>
-</html>
+    <script>
+        const dropdown = document.getElementById('dropdown');
+        const textboxContainer = document.getElementById('textbox-container');
+
+        dropdown.addEventListener('change', () => {
+            // Hide all text boxes
+            const textboxes = document.querySelectorAll('.textbox');
+            textboxes.forEach((textbox) => {
+                textbox.style.display = 'none';
+            });
+
+            // Show the selected text box
+            const selectedOption = dropdown.value;
+            const selectedTextbox = document.getElementById(selectedOption + '-textbox');
+            selectedTextbox.style.display = 'block';
+        });
