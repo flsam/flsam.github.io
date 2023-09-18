@@ -9,6 +9,194 @@
 	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<style>
+    body{
+        margin: auto;
+        padding: auto;
+    }
+    footer * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+
+    footer {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: linear-gradient(to right, #000, #023814);
+        color: #fff;
+        padding: 75px 0 30px;
+        border-top-left-radius: 125px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    footer p {
+    margin: 0;
+    padding: 0;
+}
+    footer .row {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    footer .col {
+        flex-basis: 25%;
+    }
+
+    footer .col:nth-child(2),
+    footer .col:nth-child(3) {
+        flex-basis: 15%;
+        text-align: center;
+    }
+
+    footer .logo {
+        width: 80px;
+        margin-bottom: 30px;
+    }
+
+    footer .col h3 {
+        width: fit-content;
+        margin: 0 auto 40px;
+        position: relative;
+    }
+
+    footer ul li {
+        list-style: none;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    footer .social-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .social-icons .fa-brands {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: #000;
+        background: #fff;
+        margin-right: 15px;
+    }
+
+    footer hr {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+    }
+
+    footer .copyright {
+        text-align: center;
+    }
+
+    footer .col:nth-child(2) {
+        flex-basis: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .discord-widget {
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+        max-width: 400px;
+    }
+
+    footer .server-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    footer .announcements {
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    footer .join-button {
+        background-color: #fff;
+        color: #000;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    footer .join-button:hover {
+        background-color: #fff;
+    }
+
+    footer .underline {
+        width: 100%;
+        height: 5px;
+        background: #767676;
+        border-radius: 3px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        overflow: hidden;
+    }
+
+    footer .underline span {
+        width: 15px;
+        height: 100%;
+        background: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        animation: moving 3s linear infinite;
+    }
+
+    @keyframes moving {
+        0% {
+            left: -20px;
+        }
+        100% {
+            left: 100px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        footer {
+            bottom: unset;
+        }
+
+        footer .col {
+            flex-basis: 100%;
+        }
+
+        footer .col:nth-child(2),
+        footer .col:nth-child(3) {
+            flex-basis: 100%;
+        }
+    }
+
+    </style>
 </head>
 
 <body>
@@ -108,6 +296,54 @@
 			</div>
 		</div>
 	</div>
+	<br>
+	<hr>
+	<footer>
+        <div class="row">
+            <!--column one-->
+            <div class="col">
+                <img src="image (1).png" class="logo">
+                <p>
+                    FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+                </p>
+            </div>
+            <!--column two-->
+            <div class="col">
+                <h3>Discord<div class="underline"><span></span></div></h3>
+                <div class="discord-widget">
+                    <div class="server-name">Join FLSAM</div>
+                    <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
+                    <button class="join-button">Join Server</button>
+                </div>
+            </div>
+            <!--column three-->
+            <div class="col">
+                <h3>Navigation<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/index.html">Home</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/meetings/index.html">Meetings</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/gallery/index.html">Gallery</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/downloads/index.html">Downloads</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/officers/index.html">Officers</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/competitions/index.html">Competitions</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/results/index.html">Results</a></li>
+                </ul>
+            </div>
+            <!--column four-->
+            <div class="col">
+                <h3>Stay in contact<div class="underline"><span></span></div></h3>
+                <div class="social-icons">
+                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                    <br>
+                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
+                    <br>
+                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-discord"></i> </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
+    </footer>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
