@@ -195,7 +195,46 @@
             flex-basis: 100%;
         }
     }
+        /* Define the grid container */
+        .text-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Always three columns */
+            gap: 20px; /* Gap between grid items */
+        }
 
+        /* Style the grid items */
+        .text-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* Add curved edges */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        /* Change the text color on hover */
+        .text-item:hover h2 {
+            color: #08D44C; /* Text color on hover */
+        }
+
+        /* Style the headings */
+        .text-item h2 {
+            margin: 0;
+            padding: 10px 0;
+            transition: color 0.3s; /* Smooth transition for text color */
+        }
+
+        /* Add some responsive design */
+        @media (max-width: 768px) {
+            .text-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+            /* Style the invisible placeholder */
+        .empty-placeholder {
+        visibility: hidden;
+    }
     </style>
 </head>
 
@@ -252,50 +291,140 @@
 			<div class="row">
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 1 (Tallahassee)</h4>
-						<p >Bay, Calhoun, Escambia, Franklin, Gadsden, Gulf, Holmes, Jackson, Jefferson, Leon, Liberty, Madison, Okaloosa, Santa Rosa, Taylor, Wakulla, Walton, Washington</p>
-						<p> For more info, check <a href = "https://www.facebook.com/groups/630758564544165" target="_blank">here</a> or contact kvedula2004@gmail.com</p>
+						<p>Bay, Calhoun, Escambia, Franklin, Gadsden, Gulf, Holmes, Jackson, Jefferson, Leon, Liberty, Madison, Okaloosa, Santa Rosa, Taylor, Wakulla, Walton, Washington</p>
+						<p> For more info, check <a href = "https://www.facebook.com/groups/630758564544165" target="_blank">here</a> or contact amsyed006@gmail.com</p>
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 2 (Gainesville)</h4>
 						<p> Alachua, Baker, Bradford, Citrus, Clay, Columbia, Dixie, Duval, Flagler, Gilchrist, Hamilton, Lafayette, Levy, Marion, Nassau, Putnam, St. Johns, Suwannee, Union, Volusia </p>
-						<p>  For more info, check <a href = "https://www.facebook.com/groups/721022568009894" target="_blank">here</a> or contact apathak3141592@gmail.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/721022568009894" target="_blank">here</a> or contact katiehefl@gmail.com</p>
 
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 3 (Central Florida)</h4>
 						<p> Brevard, Indian River, Lake, Martin, Okeechobee, Orange, Osceola, Seminole, St. Lucie, Sumter, Palm Beach (north of Lake Worth Road)</p>
-						<p> For more info, contact anujp1211@gmail.com</p>
+						<p> For more info, contact amritvignesh@gmail.com</p>
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 4a (Tampa Bay)</h4>
 						<p> Hernando, Pasco, Hillsborough, Pinellas, Polk, Manatee, Hardee</p>
-						<p>  For more info, check <a href = https://www.facebook.com/groups/599531717418370" target="_blank">here</a> or contact neilshah2003@gmail.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/599531717418370" target="_blank">here</a> or contact  vigneshs2006@outlook.com</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 4b (Southwest Florida) </h4>
 						<p> Sarasota, Desoto, Glades, Charlotte, Lee, Highlands</p>
-						<p>  For more info, check <a href = https://www.facebook.com/groups/236563560765419" target="_blank">here</a> or contact jhawk111@icloud.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/236563560765419" target="_blank">here</a> or contact rui.jiang2007@gmail.com</p>
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 5a (Broward)</h4>
 						<p> Miami - Dade, Monroe</p>
-						<p>  For more info, check <a href = https://www.facebook.com/groups/207926222605848" target="_blank">here</a> or contact pl242941@ahschool.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/207926222605848" target="_blank">here</a> or contact avahavidic@gmail.com</p>
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 5b (Miami)</h4>
 						<p> Broward, Collier</p>
-						<p>  For more info, check <a href = "https://www.facebook.com/groups/flsam5B" target="_blank">here</a> or contact sxdiaz7@gmail.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/flsam5B" target="_blank">here</a> or contact atchaubey2006@gmail.com</p>
 				</div>
 				<div class="col-lg-3">
 					<h4 class="prof-header">Counties in region 5c </h4>
 						<p> Palm Beach, Hendry</p>
-						<p>  For more info, check <a href = "https://www.facebook.com/groups/1976607029062012" target="_blank">here</a> or contact bd552351@ahschool.com</p>
+						<p>  For more info, check <a href = "https://www.facebook.com/groups/1976607029062012" target="_blank">here</a> or contact jeffsmile315@gmail.com</p>
 				</div>
 			</div>
 		</div>
 	</div>
+    <hr>
+
+
+    <div class="text-grid">
+        <div class="text-item">
+            <h2>Counties in region 1 (Tallahassee)</h2>
+            <p>Bay, Calhoun, Escambia, Franklin, Gadsden, Gulf, Holmes, Jackson, Jefferson, Leon, Liberty, Madison, Okaloosa, Santa Rosa, Taylor, Wakulla, Walton, Washington</p>
+			<p> For more info, check <a href = "https://www.facebook.com/groups/630758564544165" target="_blank">here</a> or contact amsyed006@gmail.com</p>
+        </div>
+        <div class="text-item">
+            <h2>Counties in region 2 (Gainesville)</h2>
+            <p> Alachua, Baker, Bradford, Citrus, Clay, Columbia, Dixie, Duval, Flagler, Gilchrist, Hamilton, Lafayette, Levy, Marion, Nassau, Putnam, St. Johns, Suwannee, Union, Volusia </p>
+			<p>  For more info, check <a href = "https://www.facebook.com/groups/721022568009894" target="_blank">here</a> or contact katiehefl@gmail.com</p>
+        </div>
+        <div class="text-item">
+            <h2>Counties in region 3 (Central Florida)</h2>
+            <p> Brevard, Indian River, Lake, Martin, Okeechobee, Orange, Osceola, Seminole, St. Lucie, Sumter, Palm Beach (north of Lake Worth Road)</p>
+			<p> For more info, contact amritvignesh@gmail.com</p>
+        </div>
+        <div class="text-item">
+            <h2>Counties in region 4a (Tampa Bay)</h2>
+            <p> Hernando, Pasco, Hillsborough, Pinellas, Polk, Manatee, Hardee</p>
+            <p>  For more info, check <a href = "https://www.facebook.com/groups/599531717418370" target="_blank">here</a> or contact  vigneshs2006@outlook.com</p>
+        </div>
+        <div class="text-item">
+            <h2>Counties in region 5a (Broward)</h2>
+            <p> Miami - Dade, Monroe</p>
+			<p>  For more info, check <a href = "https://www.facebook.com/groups/207926222605848" target="_blank">here</a> or contact avahavidic@gmail.com</p>
+        </div>
+        <div class="text-item">
+            <h2 class="prof-header">Counties in region 5b (Miami)</h2>
+             <p> Broward, Collier</p>
+             <p>  For more info, check <a href = "https://www.facebook.com/groups/flsam5B" target="_blank">here</a> or contact atchaubey2006@gmail.com</p>
+        </div>
+        <div class="text-item empty-placeholder"></div>
+        <div class="text-item" >
+            <h2 class="prof-header">Counties in region 5c </h2>
+                <p> Palm Beach, Hendry</p>
+                <p>  For more info, check <a href = "https://www.facebook.com/groups/1976607029062012" target="_blank">here</a> or contact jeffsmile315@gmail.com</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+    <footer>
+        <div class="row">
+            <!--column one-->
+            <div class="col">
+                <img src="image (1).png" class="logo">
+                <p>
+                    FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+                </p>
+            </div>
+            <!--column two-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
+                <div class="discord-widget">
+                    <div class="server-name">Join FLSAM server!</div>
+                    <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
+                    <button class="join-button">Join Server</button>
+                </div>
+            </div>
+            <!--column three-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/index.html">Home</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/meetings/index.html">Meetings</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/gallery/index.html">Gallery</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/downloads/index.html">Downloads</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/officers/index.html">Officers</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/competitions/index.html">Competitions</a></li>
+                    <li style="font-weight: bold;"> <a href="https://flsam.org/results/index.html">Results</a></li>
+                </ul>
+            </div>
+            <!--column four-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Stay in contact<div class="underline"><span></span></div></h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
+                    <br>
+                    <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fa-brands fa-facebook"></i> </a>
+                    <br>
+                    <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fa-brands fa-discord"></i> </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
+    </footer>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
