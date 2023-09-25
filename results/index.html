@@ -419,7 +419,33 @@
             </div>
         </div>
     </div>
-			<br>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.getElementById('dropdown');
+            const textboxContainer = document.getElementById('textbox-container');
+
+            // Function to show the selected text box
+            function showSelectedTextbox() {
+                // Hide all text boxes
+                const textboxes = document.querySelectorAll('.textbox');
+                textboxes.forEach((textbox) => {
+                    textbox.style.display = 'none';
+                });
+
+                // Show the selected text box
+                const selectedOption = dropdown.value;
+                const selectedTextbox = document.getElementById(selectedOption + '-textbox');
+                selectedTextbox.style.display = 'block';
+            }
+
+            // Add an event listener for the dropdown change event
+            dropdown.addEventListener('change', showSelectedTextbox);
+
+            // Trigger the change event initially to display the default content
+            showSelectedTextbox();
+        });
+    </script>
+						<br>
 			<hr>
 		<footer>
     <div class="row">
@@ -469,31 +495,5 @@
     <hr>
     <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
 </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const dropdown = document.getElementById('dropdown');
-            const textboxContainer = document.getElementById('textbox-container');
-
-            // Function to show the selected text box
-            function showSelectedTextbox() {
-                // Hide all text boxes
-                const textboxes = document.querySelectorAll('.textbox');
-                textboxes.forEach((textbox) => {
-                    textbox.style.display = 'none';
-                });
-
-                // Show the selected text box
-                const selectedOption = dropdown.value;
-                const selectedTextbox = document.getElementById(selectedOption + '-textbox');
-                selectedTextbox.style.display = 'block';
-            }
-
-            // Add an event listener for the dropdown change event
-            dropdown.addEventListener('change', showSelectedTextbox);
-
-            // Trigger the change event initially to display the default content
-            showSelectedTextbox();
-        });
-    </script>
 </body>
 </html>
