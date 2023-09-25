@@ -12,6 +12,236 @@
 	<style> 
 	img.officerimg{
 	}
+		body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .officers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+            grid-gap: 24px;
+            margin: 0 auto;
+        }
+
+        .officer {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .officer img {
+            max-width: 100%;
+            height: 200px; /* Set the desired height for all images */
+            object-fit: cover;
+            border-radius: 10px; /* Use a smaller border radius to create rounded rectangles */
+        }
+        .placeholder {
+            visibility: hidden;
+        }
+        body{
+        margin: auto;
+        padding: auto;
+    }
+    footer * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+
+    footer {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: linear-gradient(to right, #000, #023814);
+        color: #fff;
+        padding: 75px 0 30px;
+        border-top-left-radius: 125px;
+        line-height: 20px;
+    }
+
+    footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+    footer .row {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    footer .col {
+        flex-basis: 25%;
+        font-size: 12px;
+    }
+
+    footer .col:nth-child(2),
+    footer .col:nth-child(3) {
+        flex-basis: 15%;
+        text-align: center;
+    }
+
+    footer .logo {
+        width: 80px;
+        margin-bottom: 30px;
+    }
+
+    footer .col h3 {
+        width: fit-content;
+        margin: 0 auto 40px;
+        position: relative;
+        font-size: 15px;
+    }
+
+    footer ul li {
+        list-style: none;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    footer ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-icons .fa {
+            font-size: 24px; /* Adjust the font-size as needed */
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 15px;
+            background: #fff;
+            color: #000;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons .fa:hover {
+            background-color: #fff;
+        }
+    footer hr {
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+    }
+
+    footer .copyright {
+        text-align: center;
+    }
+
+    footer .col:nth-child(2) {
+        flex-basis: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .discord-widget {
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+        max-width: 400px;
+    }
+
+    footer .server-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    footer .announcements {
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    footer .join-button {
+        background-color: #fff;
+        color: #000;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    footer .join-button:hover {
+        background-color: #fff;
+    }
+
+    footer .underline {
+        width: 100%;
+        height: 5px;
+        background: #767676;
+        border-radius: 3px;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        overflow: hidden;
+    }
+
+    footer .underline span {
+        width: 15px;
+        height: 100%;
+        background: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        animation: moving 3s linear infinite;
+    }
+
+    @keyframes moving {
+        0% {
+            left: -20px;
+        }
+        100% {
+            left: 100px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        footer {
+            bottom: unset;
+        }
+
+        footer .col {
+            flex-basis: 100%;
+        }
+
+        footer .col:nth-child(2),
+        footer .col:nth-child(3) {
+            flex-basis: 100%;
+        }
+    }
 	</style>
 </head>
 
@@ -242,6 +472,259 @@
 				
 		</div>
 	</div>
+<div class="officers-grid">
+        <!-- Officer 1 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Aaron.jpg" alt="Officer 1">
+            <h3 class="prof-header">Aaron Hu: <br> Co-President</h3>
+			<p>
+			Aaron Hu is a senior at Lawton Chiles High School. He began competing in Mathcounts in sixth grade and since then has participated in FAMAT and the AMC series. He joined FLSAM in seventh grade and has enjoyed the various competitions they attend. His favorite part of math is algebra. Besides doing math, he spends his time playing basketball, listening to music, and napping.
+			</p>
+        </div>
+
+        <!-- Officer 2 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Alex.jpg" alt="Officer 2">
+            <h3 class="prof-header">Alexander Li: <br> Co-President</h3>
+			<p>
+				Alexander Li is a senior at King High School. He began competing through AMC 8, and later Mathcounts in middle school, joining FLSAM in 7th grade. His favorite topic is calculus. When he is doing math, Alex likes solving and writing contest problems. When he is not doing math, Alex may be found studying physics or sleeping.
+			</p>
+        </div>
+
+        <!-- Officer 3 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Andrew xing (1).png" alt="Officer 3">
+            <h3 class="prof-header">Andrew Xing: <br> Co-Vice President </h3>
+            <p>
+            Andrew Xing is a junior at Buchholz High School. He started competitive math in 4th grade, and has participated in various national and statewide events, including FAMAT, AMC, and Mathcounts. He joined FLSAM in eighth grade, and has enjoyed participating in the multiple competitions they hold. His favorite subject in math is geometry, and he has a lot of fun teaching others. Some of his favorite pastimes outside of math include contemplating his life choices, listening to a far too wide range of music, attempting to expand his interests, and playing video games.
+            </p>
+        </div>
+        
+        <!-- Officer 4 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Xuzhou.png" alt="Officer 4">
+            <h3 class="prof-header">Xuzhou Ren: <br> Co-Vice President </h3>
+            <p>
+            Xuzhou Ren is a junior at American Heritage School. He enjoys nuking geometry problems and writing projective geometry and graph theory problems. Outside of math, he enjoys investing and writing his food blog.
+            </p>
+        </div>
+
+        <!-- Officer 5 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Jessica.png" alt="Officer 5">
+            <h3 class="prof-header">Jessica Wan: <br> Curriculum Committee Chair</h3>
+			<p>
+				Jessica Wan is a high school senior who's enjoyed contest math since elementary school. She has participated in various contests and olympiads, including Mathcounts, USAMO, and EGMO. After joining FLSAM in 9th grade, she competed with the team at HMMT and PUMaC. Outside of competition math, she enjoys studying abstract algebra, crocheting, and puzzling.
+			</p>
+        </div>
+
+        <!-- Officer 6 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Shivinanand.png" alt="Officer 6">
+            <h3 class="prof-header">Shivin Anand: <br> Webmaster</h3>
+			<p>
+			    Shivin Anand is a sophomore at Middleton High School. He has been taking part in math competitions since the 5th grade. He joined FLSAM in the 9th grade and has enjoyed the many opportunities it has been able to provide. His favorite kind of math is 2-D geometry, and conics are his least favorite. When he is not navigating the world of mathematics, he enjoys playing video games, golfing, and listening to music.
+			</p>
+        </div>
+
+        <!-- Officer 7 -->
+        <div class="officer">
+            <img class="officerimg" src="images/aaryan.jpg" alt="Officer 7">
+            <h3 class="prof-header">Aaryan Vaishya: <br> Curriculum Committee</h3>
+            <p>
+                Aaryan Vaishya is a sophomore at Middleton High School. He has been competing in math contests since 2020, qualifying for MOP 2023. He has been in FLSAM since 7th grade, and his favorite branch of math is combinatorics. He enjoys geometry if and only if GGB is involved. Outside of math, he enjoys competitive programming, actual programming, piano, soccer, and anything he comes across with the exception of golf.
+            </p>
+        </div>
+
+        <!-- Officer 8 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Tom Zhang.png" alt="Officer 8">
+            <h3 class="prof-header">Tom Zhang: <br> Curriculum Committee</h3>
+            <p>
+                Tom Zhang is a senior at American Heritage Palm Beach. He started doing math competitions, joined FLSAM in 9th grade, and participated in competitions like FAMAT, CMIMC, and ARML. His favorite topic in math is geometry. Besides doing math, he loves playing soccer, listening to music, and playing video games.
+            </p>
+        </div>
+
+        <!-- Officer 9 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Kevin Liu.jpg" alt="Officer 9">
+            <h3 class="prof-header">Kevin Liu: <br> Curriculum Committee</h3>
+            <p>
+                Kevin Liu is a sophomore at Marjory Stoneman Douglas High School. He started math competitions at the AMC8 at 4th grade. He is a two-time Florida State MATHCOUNTS Champion, four-time AIME qualifier, three-time USAJMO qualifier, USAJMO top winner, MOPper, and USA IMO TST grouper. After joining FLSAM in seventh grade, he competed with the team at various national math competitions, such as ARML, HMMT, PUMAC, CMIMC and SMT. Outside of math, he enjoys coding, playing video games especially Geometry Dash. He is in the USACO gold division.
+            </p>
+        </div>
+
+        <!-- Officer 10 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Yuhan.png" alt="Officer 10">
+            <h3 class="prof-header">Yuhan Niu: <br> Curriculum Committee</h3>
+			<p>
+				Yuhan Niu is a senior at American Heritage School Palm Beach. He started participating in math competitions through FAMAT in 5th grade, before gradually moving into Mathcounts and AMC in middle school. He enjoys discussion with others on whatever various topics that come to mind. These topics generally fall into the categories of science, geography, history, languages, and sports, but they are definitely not limited to them. He is focused on improving in physics and math olympiads, both conceptually and methodically. Yuhan has the philosophy that whatever there is to learn, it can all be learned with enough time.
+			</p>
+        </div>
+
+        <!-- Officer 11 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Sailalitha.png" alt="Officer 11">
+            <h3 class="prof-header">Sailalitha Kodukula: <br> Curriculum Committee</h3>
+			<p>
+				Sailalitha Kodukula is a junior at American Heritage School. She has been competing in competitions such as the AMC 8 and AMC 10 since middle school. Since then, she has developed a passion for mathematics and has participated in other completions such as AIME, FAMAT, MATHCOUNTS, ARML, and CMIMC. In her free time, she enjoys listening to music, singing, and programming.
+			</p>
+        </div>
+
+        <!-- Officer 12 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Aaron Zhang.jpg" alt="Officer 12">
+            <h3 class="prof-header">Aaron Zhang:<br> Curriculum Committee</h3>
+			<p>
+				Aaron Zhang is a senior at American Heritage Broward. His first competitive math experience was at a local elementary school competition. His passion for mathematics truly began while competing in Mathcounts in 7th grade, now participating in AMC and FAMAT. Apart from doing math, Aaron enjoys playing violin and baseball. He looks forward to the new year with FLSAM!
+			</p>
+        </div>
+
+        <!-- Officer 13 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Darsh.jpg" alt="Officer 13">
+            <h3 class="prof-header">Darsh Patel: <br> Curriculum Committee</h3>
+            <p>		
+                Darsh Patel is a sophomore at American Heritage Broward. Since middle school, he has participated in math contests like MathCounts, AMC, and FAMAT, as well as ARML and CMIMC after discovering FLSAM. His favorite area of math is number theory. Outside of math, he enjoys playing chess and trying to program. 
+            </p>
+        </div>
+
+        <!-- Officer 14 -->
+        <div class="officer">
+            <img class="officerimg" src="images/image-330x400.jpg" alt="Officer 14">
+            <h3 class="prof-header">Jayden Lang: <br> Curriculum Committee</h3>
+            <p>
+                Jayden Lang is a sophomore at American Heritage Broward. He began participating in math competitions in 4th grade, and has participated in many more contests since then, including Mathcounts, AMC, and Mu Alpha Theta competitions. Ever since discovering FLSAM at the start of middle school, Jayden has also partaken in various competitions with the FLSAM team, such as ARML and CMIMC. Apart from his interests in mathematics, Jayden loves to play soccer, piano, and chess, as well as listen to music.
+            </p>
+        </div>
+
+        <!-- Officer 15 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Arib.jpg" alt="Officer 15">
+            <h3 class="prof-header">Arib Syed:<br>Region 1 Coordinator</h3>
+            <p>
+                 Arib Syed is a senior at Lawton Chiles High School. He began competing in Mathcounts in sixth grade and since then has participated in FAMAT and the AMC series. He joined FLSAM in seventh grade and has enjoyed it ever since. His favorite parts of math are geometry and number theory, and he loves AMC style questions. Besides doing math, he spends his time playing tennis, watching movies, and playing video games.
+            </p>
+        </div>
+        
+        <!-- Officer 16 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Katie.jpg" alt="Officer 16">
+            <h3 class="prof-header">Katie: <br> Region 2 Coordinator</h3>
+			<p>
+				Katie is a junior at Buchholz High School. She started competitive math 8 years ago and continues to participate in competitions like FAMAT,  ARML, and the AMC series. She joined FLSAM in middle school, and her favorite math subject is combinatorics. Outside of math, she enjoys swimming, playing tennis, listening to music, and petting her cat
+			</p>
+        </div>
+        
+        <!-- Officer 17 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Amrit.jpg" alt="Officer 17">
+            <h3 class="prof-header">Amrit Vignesh:<br>Region 3 Coordinator</h3>
+            <p>
+                Amrit Vignesh is an IB senior in Seminole High School in Sanford, FL. He has been competing in various math competitions since 5th grade, including MathLeague, MATHCOUNTS, FAMAT, AMC, and AIME. He is interested in pursuing a career either in nanotechnology or sports analytics and would like to pursue a double major in college with materials science/engineering and data science. In his free time, he likes to watch and analyze football, basketball, soccer, cricket, tennis, and F1.
+            </p>
+        </div>
+
+        <!-- Officer 18 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Vignesh.jpg" alt="Officer 18">
+            <h3 class="prof-header">Vignesh Saravanan: <br> Region 4a Coordinator </h3>
+			<p>
+				Vignesh Saravanan is a senior at King High School. He began participating in math competitions in 6th grade with MATHCOUNTS and Mu Alpha Theta later on. He joined FLSAM in 10th grade. His favorite topic in math is geometry. Aside from doing math, he also enjoys watching movies, sleeping, and learning science.
+			</p>
+        </div>
+
+        <!-- Officer 19 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Rui (1).jpg" alt="Officer 5">
+            <h3 class="prof-header">Rui Jiang: <br> Region 4b Coordinator</h3>
+            <p>
+                My name is Rui Jiang and I’m a junior at Pine View School. I have been doing math competitions since I started taking the AMC 8 in 6 th grade. Since then, I have participated in other math competitions such as USAJMO, Mathcounts, ARML, and PUMAC. Outside of math, I like to play chess, tennis, and video games.
+            </p>
+        </div>
+
+        <!-- Officer 20 -->
+        <div class="officer">
+            <img class="officerimg" src="images/8D2A1821-E85B-416F-9C51-12853C7703D2.jpeg" alt="Officer 20">
+            <h3 class="prof-header">Ava Havidic:<br>Region 5a Coordinator</h3>
+			<p>
+				Ava Havidic, a senior attending Millennium 6-12 Collegiate Academy, has loved attending math competitions since middle school. When not leading her MAT team or hosting district wide tutoring, she is often traveling, studying a new language, or working to promote the inclusivity of STEAM with schools across the nation.
+			</p>
+        </div>
+
+        <!-- Officer 21 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Aarush.jpg" alt="Officer 21">
+            <h3 class="prof-header">Aarush Chaubey:<br>Region 5b Coordinator</h3>
+            <p>
+                Aarush Chaubey is a senior at Doral Academy High School. He first started competing in fifth grade, and since then has competed in FAMAT, AIME, CMIMC, and HMMT. He joined FLSAM in 9th grade, and his favorite subject is (by far) geometry. Besides math, he really enjoys physics, programming, and history. When he's not doing anything school related, you can find him listening to Boogie, playing tennis, or hitting leg day!
+            </p>
+        </div>
+
+        <!-- Transparent placeholder for centering -->
+        <div class="placeholder center-last"></div>
+
+        <!-- Officer 22 -->
+        <div class="officer">
+            <img class="officerimg" src="images/Jeffrey.jpg" alt="Officer 22">
+            <h3 class="prof-header">Jeffrey Yu:<br>Region 5c Coordinator</h3>
+			<p>
+				Jeffrey Yu is a Junior at American Heritage Palm Beach. He started his journey in competition mathematics in middle school, competing in the AMC and Mathcounts series. Since then, Jeffrey has discovered FLSAM and competed in HMMT, PUMaC, and ARML. Other than mathematics, Jeffrey enjoys listening to music and solving puzzles. 
+			</p>
+        </div>
+
+    </div>
+    <br>
+    <hr>
+    <footer>
+        <div class="row">
+            <!--column one-->
+            <div class="col">
+                <img src="image (1).png" class="logo">
+                <p>
+                    FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+                </p>
+            </div>
+            <!--column two-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
+                <div class="discord-widget">
+                    <div class="server-name">Join FLSAM server!</div>
+                    <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
+                    <button class="join-button">Join Server</button>
+                </div>
+            </div>
+            <!--column three-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
+                <ul>
+                    <li style= "font-size: 16px; "> <b><a href="https://flsam.org/index.html">Home</a></b>
+                    <li style="font-size: 16px">  <b><a href="https://flsam.org/meetings/index.html">Meetings</a></li></b>
+                    <li style="font-size: 16px">  <b><a href="https://flsam.org/gallery/index.html">Gallery</a></li></b>
+                    <li style="font-size: 16px">  <b><a href="https://flsam.org/downloads/index.html">Downloads</a></li></b>
+                    <li style="font-size: 16px">  <b><a href="https://flsam.org/officers/index.html">Officers</a></li></b>
+                    <li style="font-size: 16px">  <b><a href="https://flsam.org/competitions/index.html">Competitions</a></li></b>
+                    <li style="font-size: 16px"> <b><a href="https://flsam.org/results/index.html">Results</a></li></b>
+                </ul>
+            </div>
+            <!--column four-->
+            <div class="col">
+                <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fab fa-twitter" style="font-size: 30px;"></i> </a>
+                    <br>
+                    <br>
+                    <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fab fa-facebook" style="font-size: 30px;"></i> </a>
+                    <br>
+                    <br>
+                    <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fab fa-discord" style="font-size: 30px;"></i> </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
+    </footer>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
