@@ -9,7 +9,7 @@
 	<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<style>
+<style>
     body{
         margin: auto;
         padding: auto;
@@ -29,13 +29,13 @@
         color: #fff;
         padding: 75px 0 30px;
         border-top-left-radius: 125px;
-        font-size: 13px;
         line-height: 20px;
     }
 
     footer p {
     margin: 0;
     padding: 0;
+    font-size: 14px;
 }
     footer .row {
         width: 85%;
@@ -48,6 +48,7 @@
 
     footer .col {
         flex-basis: 25%;
+        font-size: 12px;
     }
 
     footer .col:nth-child(2),
@@ -65,6 +66,7 @@
         width: fit-content;
         margin: 0 auto 40px;
         position: relative;
+        font-size: 15px;
     }
 
     footer ul li {
@@ -78,25 +80,33 @@
         color: #fff;
     }
 
-    footer .social-icons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    footer .social-icons .fa-brands {
-        width: 40px;
-        height: 40px;
-        border: none;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 40px;
-        font-size: 20px;
-        color: #000;
-        background: #fff;
-        margin-right: 15px;
-    }
+        .social-icons .fa {
+            font-size: 24px; /* Adjust the font-size as needed */
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 15px;
+            background: #fff;
+            color: #000;
+            transition: background-color 0.3s;
+        }
 
+        .social-icons .fa:hover {
+            background-color: #fff;
+        }
     footer hr {
         width: 90%;
         border: 0;
@@ -195,7 +205,6 @@
             flex-basis: 100%;
         }
     }
-
     </style>
 </head>
 
@@ -278,52 +287,54 @@
 	</div>
 	<br>
 	<hr>
-	<footer>
-        <div class="row">
-            <!--column one-->
-            <div class="col">
-                <img src="image (1).png" class="logo">
-                <p>
-                    FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
-                </p>
-            </div>
-            <!--column two-->
-            <div class="col">
-                <h3>Discord<div class="underline"><span></span></div></h3>
-                <div class="discord-widget">
-                    <div class="server-name">Join FLSAM</div>
-                    <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
-                    <button class="join-button">Join Server</button>
-                </div>
-            </div>
-            <!--column three-->
-            <div class="col">
-                <h3>Navigation<div class="underline"><span></span></div></h3>
-                <ul>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/index.html">Home</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/meetings/index.html">Meetings</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/gallery/index.html">Gallery</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/downloads/index.html">Downloads</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/officers/index.html">Officers</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/competitions/index.html">Competitions</a></li>
-                    <li style="font-weight: bold;"> <a href="https://flsam.org/results/index.html">Results</a></li>
-                </ul>
-            </div>
-            <!--column four-->
-            <div class="col">
-                <h3>Stay in contact<div class="underline"><span></span></div></h3>
-                <div class="social-icons">
-                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
-                    <br>
-                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
-                    <br>
-                    <a href="https://www.example.com" target="_blank"> <i class="fa-brands fa-discord"></i> </a>
-                </div>
+<footer>
+    <div class="row">
+        <!--column one-->
+        <div class="col">
+            <img src="image (1).png" class="logo">
+            <p>
+                FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+            </p>
+        </div>
+        <!--column two-->
+        <div class="col">
+            <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
+            <div class="discord-widget">
+                <div class="server-name">Join FLSAM server!</div>
+                <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
+                <button class="join-button">Join Server</button>
             </div>
         </div>
-        <hr>
-        <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
-    </footer>
+        <!--column three-->
+        <div class="col">
+            <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
+            <ul>
+                <li style= "font-size: 16px; "> <b><a href="https://flsam.org/index.html">Home</a></b>
+                <li style="font-size: 16px">  <b><a href="https://flsam.org/meetings/index.html">Meetings</a></li></b>
+                <li style="font-size: 16px">  <b><a href="https://flsam.org/gallery/index.html">Gallery</a></li></b>
+                <li style="font-size: 16px">  <b><a href="https://flsam.org/downloads/index.html">Downloads</a></li></b>
+                <li style="font-size: 16px">  <b><a href="https://flsam.org/officers/index.html">Officers</a></li></b>
+                <li style="font-size: 16px">  <b><a href="https://flsam.org/competitions/index.html">Competitions</a></li></b>
+                <li style="font-size: 16px"> <b><a href="https://flsam.org/results/index.html">Results</a></li></b>
+            </ul>
+        </div>
+        <!--column four-->
+        <div class="col">
+            <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
+            <div class="social-icons">
+                <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fab fa-twitter" style="font-size: 30px;"></i> </a>
+                <br>
+                <br>
+                <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fab fa-facebook" style="font-size: 30px;"></i> </a>
+                <br>
+                <br>
+                <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fab fa-discord" style="font-size: 30px;"></i> </a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
+</footer>
 	<script src="../js/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
