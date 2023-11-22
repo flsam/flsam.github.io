@@ -1,9 +1,15 @@
-[class*="mySlides"] {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
- }
-
 .gallery-slideshow {
-    margin: auto;
+    display: flex;
+    flex-wrap: nowrap; /* Ensure images are in a single row */
+    overflow: hidden; /* Hide the overflow content */
+}
+
+.w3-content {
+    display: flex;
+}
+
+.mySlides10 {
+    flex: 0 0 auto; /* Prevent images from shrinking or growing */
+    width: 100%; /* Ensure images take the full width of the container */
+    height: auto;
 }
