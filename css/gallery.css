@@ -1,15 +1,14 @@
 .gallery-slideshow {
-    display: flex;
-    flex-wrap: nowrap; /* Ensure images are in a single row */
     overflow: hidden; /* Hide the overflow content */
 }
 
 .w3-content {
     display: flex;
+    width: 100%; /* Ensure the content takes full width */
 }
 
 .mySlides10 {
-    flex: 0 0 auto; /* Prevent images from shrinking or growing */
-    width: 100%; /* Ensure images take the full width of the container */
+    flex: 0 0 100%; /* Each image takes the full width of the container */
+    max-width: 100%; /* Ensure images don't exceed container width */
     height: auto;
 }
