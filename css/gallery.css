@@ -1,20 +1,10 @@
-.gallery-slideshow {
-    overflow: hidden; /* Hide the overflow content */
-    margin: auto;
-}
-
-.w3-content {
-    display: flex;
-    width: 100%; /* Ensure the content takes full width */
-}
-
-.mySlides10 {
-    flex: 0 0 100%; /* Each image takes the full width of the container */
-    max-width: 100%; /* Ensure images don't exceed container width */
-    height: auto;
-}
 [class*="mySlides"] {
     margin: auto;
     width: 50%;
     padding: 10px;
  }
+
+.gallery-slideshow {
+    margin: auto;
+}
+
