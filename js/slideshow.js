@@ -1,4 +1,4 @@
-var numSlideShows = 10;
+var numSlideShows = 10; // Increase the total number of slideshows
 var slideIndex = [];
 var offset = 4;
 for (var i = offset; i < numSlideShows; i++) {
