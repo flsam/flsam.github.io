@@ -1,4 +1,4 @@
-var numSlideShows = 9;
+var numSlideShows = 10;
 var slideIndex = [];
 var offset = 4;
 for (var i = offset; i < numSlideShows; i++) {
