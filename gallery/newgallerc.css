@@ -1,18 +1,18 @@
-.container {
+.1container {
     padding: 2rem;
 }
 
-.section-heading {
+.1section-heading {
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.slider-wrapper {
+.1slider-wrapper {
     position: relative;
     margin: 0 auto;
 }
 
-.slider {
+.1slider {
     display: flex;
     aspect-ratio: 16/9;
     overflow: hidden;
@@ -22,13 +22,13 @@
     border-radius: 0.5rem;
 }
 
-.slider img {
+.1slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
 }
 
-.slider-nav{
+.1slider-nav{
     display:flex;
     column-gap: 1rem;
     position: absolute;
@@ -38,7 +38,7 @@
     z-index: 1;
 }
 
-.slider-nav a {
+.1slider-nav a {
     width: .6rem;
     height: .6rem;
     border-radius: 50%;
@@ -46,6 +46,6 @@
     opacity: 0.85;
     transition: opacity ease 250ms;
 }
-.slider-nav a:hover {
+.1slider-nav a:hover {
     opacity: 1;
 }
