@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,36 +15,7 @@
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<script src="https://kit.fontawesome.com/ca0d8e26e9.js"></script>
-	<style>
-    	body {
-        	background-color: #fcfcfc;        
-		    margin: auto;
-        	padding: auto;
-        }
-        .officers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-            grid-gap: 24px;
-            margin: 0 auto;
-        }
-
-        .officer {
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .officer img {
-            max-width: 100%;
-            height: 200px; /* Set the desired height for all images */
-            object-fit: cover;
-            border-radius: 10px; /* Use a smaller border radius to create rounded rectangles */
-        }
-        .placeholder {
-            visibility: hidden;
-        }
+  <style>
     footer * {
         margin: 0;
         padding: 0;
@@ -230,11 +201,76 @@
             flex-basis: 100%;
         }
     }
-	</style>
-</head>
 
+    .gallery-container {
+      position: relative;
+      overflow: hidden;
+      width: 750px; /* Changed width to 750px */
+      height: 500px; /* Fixed height for the container */
+      margin: 0 auto;
+    }
+
+    .image-container {
+      position: absolute;
+      width: 100%; /* Each image takes up the entire width of the container */
+      height: 100%; /* Each image takes up the entire height of the container */
+      text-align: center;
+      transition: opacity 0.5s ease; /* Transition opacity for fade effect */
+      opacity: 0; /* Start with opacity 0 */
+    }
+
+    .image-container.active {
+      opacity: 1; /* Set active image opacity to 1 */
+    }
+
+    .image-container img {
+      width: 750px; /* Changed width to 750px */
+      height: auto;
+      border-radius: 20px; /* Maintain rounded corners */
+    }
+
+    .text {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+    }
+
+    .dots-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: black; /* Change dot color to white */
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease, transform 0.6s ease; /* Transition color and size */
+    }
+
+    .dot.active {
+      transform: scale(1.5); /* Enlarge active dot */
+    }
+
+    body {
+      background-color: white;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    h1{
+      text-align: center;
+      color:black;
+    }
+  </style>
+</head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -279,192 +315,307 @@
 		</div>
 	</nav>
 
-        <!--To add a new gallery, simply copy everything from h2 to hr and add one to the number from previous slide-->
-        <section class="scontainer">
-            <h2 class="ssection-heading">2023 ARML Pictures</h2>
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <!--Here is where the number changes dependent on the slide, you would change the 6 to whatever the new one is-->
-                    <img id="6slide-1" src="unnamed (3).jpg" alt=""/>
-                    <img id="6slide-2" src="unnamed (2).jpg" alt=""/>
-                    <img id="6slide-3" src="unnamed (4).jpg" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <!--Here too-->
-                    <a href="#6slide-1"></a>
-                    <a href="#6slide-2"></a>
-                    <a href="#6slide-3"></a>
-                </div>
-            </div>
+  <!--beg of gallery-->
 
-            <hr>
-            <h2 class="ssection-heading">2023 PuMAC Pictures</h2>
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="5slide-1" src="IMG_5489.jpg" alt=""/>
-                    <img id="5slide-2" src="1175610667286396969remix-1700443014891.png" alt=""/>
-                    <img id="5slide-3" src="IMG_20231117_184340656.jpg" alt=""/>
-                    <img id="5slide-4" src="IMG_20231118_075628534.jpg" alt=""/>
-                    <img id="5slide-5" src="IMG_20231118_144856792.jpg" alt=""/>
-                    <img id="5slide-6" src="IMG_20231118_205613.jpg" alt=""/>
-                    <img id="5slide-7" src="IMG_0395.jpg" alt=""/>
-                    <img id="5slide-8" src="IMG_5671.png" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#5slide-1"></a>
-                    <a href="#5slide-2"></a>
-                    <a href="#5slide-3"></a>
-                    <a href="#5slide-4"></a>
-                    <a href="#5slide-5"></a>
-                    <a href="#5slide-6"></a>
-                    <a href="#5slide-7"></a>
-                    <a href="#5slide-8"></a>
-                </div>
-            </div>
+  <div>
+    <h1>2023 ARML Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="unnamed (3).jpg" alt="Image 1">
+      </div>
+      <div class="image-container">
+        <img src="unnamed (2).jpg" alt="Image 2">
+      </div>
+      <div class="image-container">
+        <img src="unnamed (4).jpg" alt="Image 3">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
 
-            <hr>
-            <h2 class="ssection-heading">2022 PuMAC Pictures</h2>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
 
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="4slide-1" src="https://media.discordapp.net/attachments/1006990305171603477/1094346048954175498/IMG_6534.png?" alt=""/>
-                    <img id="4slide-2" src="https://media.discordapp.net/attachments/1006990305171603477/1094346049939849367/IMG_6527.png?" alt=""/>
-                    <img id="4slide-3" src="https://media.discordapp.net/attachments/1006990305171603477/1094346051302985748/IMG_6520.png" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#4slide-1"></a>
-                    <a href="#4slide-2"></a>
-                    <a href="#4slide-3"></a>
-                </div>
-            </div>
+  </div>
 
-            <hr>
-            <h2 class="ssection-heading">2023 CMIMC Pictures</h2>
+  <br>
+  <hr>
+  <br>
 
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="3slide-1" src="https://media.discordapp.net/attachments/1084902954735243386/1090098554254659584/IMG-1145.JPG" alt=""/>
-                    <img id="3slide-2" src="https://media.discordapp.net/attachments/1006990305171603477/1094316475457749052/IMG_3034.jpeg" alt=""/>
-                    <img id="3slide-3" src="https://media.discordapp.net/attachments/1006990305171603477/1094316475998797966/IMG_3032.jpeg" alt=""/>
-                    <img id="3slide-4" src="https://media.discordapp.net/attachments/1006990305171603477/1094316476497932348/IMG_3030.jpeg" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#3slide-1"></a>
-                    <a href="#3slide-2"></a>
-                    <a href="#3slide-3"></a>
-                    <a href="#3slide-4"></a>
-                </div>
-            </div>
+  <div>
+    <h1>2023 PuMAC Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="IMG_5489.jpg" alt="Image 4">
+      </div>
+      <div class="image-container">
+        <img src="1175610667286396969remix-1700443014891.png" alt="Image 5">
+      </div>
+      <div class="image-container">
+        <img src="IMG_20231117_184340656.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="IMG_20231118_075628534.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="IMG_20231118_144856792.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="IMG_20231118_205613.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="IMG_0395.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="IMG_5671.png" alt="Image 6">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
 
-            <hr>
-            <h2 class="ssection-heading">2023 HMMT Pictures</h2>
+  <br>
+  <hr>
+  <br>
 
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="2slide-1" src="https://cdn.discordapp.com/attachments/1006990305171603477/1094313952554529000/mmexport1676856173121.png" alt=""/>
-                    <img id="2slide-2" src="https://media.discordapp.net/attachments/1006990305171603477/1094313953338871828/mmexport1676856175410.png" alt=""/>
-                    <img id="2slide-3" src="https://media.discordapp.net/attachments/1006990305171603477/1094313954186113024/mmexport1676856190506.png" alt=""/>
-                    <img id="2slide-4" src="https://media.discordapp.net/attachments/1006990305171603477/1094313954790101022/mmexport1676856192584.png" alt=""/>
-                    <img id="2slide-5" src="https://media.discordapp.net/attachments/1006990305171603477/1094313955498917918/mmexport1676856213780.png" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#2slide-1"></a>
-                    <a href="#2slide-2"></a>
-                    <a href="#2slide-3"></a>
-                    <a href="#2slide-4"></a>
-                    <a href="#2slide-5"></a>
-                </div>
-            </div>
+  <div>
+    <h1>2023 CMIMC Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="https://media.discordapp.net/attachments/1084902954735243386/1090098554254659584/IMG-1145.JPG" alt="Image 4">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094316475457749052/IMG_3034.jpeg" alt="Image 5">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094316475998797966/IMG_3032.jpeg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094316476497932348/IMG_3030.jpeg" alt="Image 6">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
+  
+  <br>
+  <hr>
+  <br>
 
-            <hr>
-            <h2 class="ssection-heading">2022 ARML Pictures</h2>
+  <div>
+    <h1>2023 HMMT Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="https://cdn.discordapp.com/attachments/1006990305171603477/1094313952554529000/mmexport1676856173121.png" alt="Image 4">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094313953338871828/mmexport1676856175410.png" alt="Image 5">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094313954186113024/mmexport1676856190506.png" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094313954790101022/mmexport1676856192584.png" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094313955498917918/mmexport1676856213780.png" alt="Image 6">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
+  
+  <br>
+  <hr>
+  <br>
 
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="1slide-1" src="https://media.discordapp.net/attachments/770441380219977748/1019389147745620019/unknown.png" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#1slide-1"></a>
-            </div>
-            
-            <hr>
-            <h2 class="ssection-heading">2019 Pictures</h2>
+  <div>
+    <h1>2022 PuMAC Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094346048954175498/IMG_6534.png?" alt="Image 4">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094346049939849367/IMG_6527.png?" alt="Image 5">
+      </div>
+      <div class="image-container">
+        <img src="https://media.discordapp.net/attachments/1006990305171603477/1094346051302985748/IMG_6520.png" alt="Image 6">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
 
-            <div class="sslider-wrapper">
-                <div class="sslider">
-                    <img id="0slide-1" src="2019/01.jpg" alt=""/>
-                    <img id="0slide-2" src="2019/02.jpg" alt=""/>
-                    <img id="0slide-3" src="2019/03.jpg" alt=""/>
-                    <img id="0slide-4" src="2019/04.jpg" alt=""/>
-                    <img id="0slide-5" src="2019/05.jpg" alt=""/>
-                    <img id="0slide-6" src="2019/06.jpg" alt=""/>
-                    <img id="0slide-7" src="2019/07.jpg" alt=""/>
-                    <img id="0slide-8" src="2019/08.jpg" alt=""/>
-                </div>
-                <div class="sslider-nav">
-                    <a href="#0slide-1"></a>
-                    <a href="#0slide-2"></a>
-                    <a href="#0slide-3"></a>
-                    <a href="#0slide-4"></a>
-                    <a href="#0slide-5"></a>
-                    <a href="#0slide-6"></a>
-                    <a href="#0slide-7"></a>
-                </div>
-            </div>
-        </section>
-	 <hr>
-	<br>
-	    <footer>
-        <div class="row">
-            <!--column one-->
-            <div class="col">
-                <img src="image (1).png" class="logo">
-                <p>
-                    FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
-                </p>
-            </div>
-            <!--column two-->
-            <div class="col">
-                <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
-                <div class="discord-widget">
-                    <div class="server-name">Join FLSAM server!</div>
-                    <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
-                    <button class="join-button">Join Server</button>
-                </div>
-            </div>
-            <!--column three-->
-            <div class="col">
-                <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
-                <ul>
-                    <li style= "font-size: 16px; "> <b><a href="https://flsam.org/index.html">Home</a></b>
-                    <li style="font-size: 16px">  <b><a href="https://flsam.org/meetings/index.html">Meetings</a></li></b>
-                    <li style="font-size: 16px">  <b><a href="https://flsam.org/gallery/index.html">Gallery</a></li></b>
-                    <li style="font-size: 16px">  <b><a href="https://flsam.org/downloads/index.html">Downloads</a></li></b>
-                    <li style="font-size: 16px">  <b><a href="https://flsam.org/officers/index.html">Officers</a></li></b>
-                    <li style="font-size: 16px">  <b><a href="https://flsam.org/competitions/index.html">Competitions</a></li></b>
-                    <li style="font-size: 16px"> <b><a href="https://flsam.org/results/index.html">Results</a></li></b>
-		    <li style="font-size: 16px"> <b><a href="https://flsam.org/Sponsors/index.html">Sponsors</a></li></b>
-                </ul>
-            </div>
-            <!--column four-->
-            <div class="col">
-                <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
-                <div class="social-icons">
-                    <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fab fa-twitter" style="font-size: 30px;"></i> </a>
-                    <br>
-                    <br>
-                    <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fab fa-facebook" style="font-size: 30px;"></i> </a>
-                    <br>
-                    <br>
-                    <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fab fa-discord" style="font-size: 30px;"></i> </a>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
-    </footer>
-	<script src="../js/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/slideshow.js"></script>
+  <div>
+    <h1>2022 ARML Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="https://media.discordapp.net/attachments/770441380219977748/1019389147745620019/unknown.png" alt="Image 4">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
+  
+  <br>
+  <hr>
+  <br>
+
+  <div>
+    <h1>2019 Pictures</h1>
+    <div class="gallery-container">
+      <div class="image-container active">
+        <img src="2019/01.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/02.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/03.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/04.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/05.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/06.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/07.jpg" alt="Image 4">
+      </div>
+      <div class="image-container active">
+        <img src="2019/08.jpg" alt="Image 4">
+      </div>
+      <!-- Add more image-container divs for additional images -->
+    </div>
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(2, this.parentElement.previousElementSibling)"></span>
+      <span class="dot" onclick="currentSlide(3, this.parentElement.previousElementSibling)"></span>
+      <!-- Add more dots for additional images -->
+    </div>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+<!--end of gallery-->
+
+<footer>
+  <div class="row">
+      <!--column one-->
+      <div class="col">
+          <img src="image (1).png" class="logo">
+          <p>
+              FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+          </p>
+      </div>
+      <!--column two-->
+      <div class="col">
+          <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
+          <div class="discord-widget">
+              <div class="server-name">Join FLSAM server!</div>
+              <a class="announcements" href="https://discord.com/invite/c8AfFP5e25">Announcements Channel</a>
+              <button class="join-button">Join Server</button>
+          </div>
+      </div>
+      <!--column three-->
+      <div class="col">
+          <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
+          <ul>
+              <li style= "font-size: 16px; "> <b><a href="https://flsam.org/index.html">Home</a></b>
+              <li style="font-size: 16px">  <b><a href="https://flsam.org/meetings/index.html">Meetings</a></li></b>
+              <li style="font-size: 16px">  <b><a href="https://flsam.org/gallery/index.html">Gallery</a></li></b>
+              <li style="font-size: 16px">  <b><a href="https://flsam.org/downloads/index.html">Downloads</a></li></b>
+              <li style="font-size: 16px">  <b><a href="https://flsam.org/officers/index.html">Officers</a></li></b>
+              <li style="font-size: 16px">  <b><a href="https://flsam.org/competitions/index.html">Competitions</a></li></b>
+              <li style="font-size: 16px"> <b><a href="https://flsam.org/results/index.html">Results</a></li></b>
+  <li style="font-size: 16px"> <b><a href="https://flsam.org/Sponsors/index.html">Sponsors</a></li></b>
+          </ul>
+      </div>
+      <!--column four-->
+      <div class="col">
+          <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
+          <div class="social-icons">
+              <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fab fa-twitter" style="font-size: 30px;"></i> </a>
+              <br>
+              <br>
+              <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fab fa-facebook" style="font-size: 30px;"></i> </a>
+              <br>
+              <br>
+              <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fab fa-discord" style="font-size: 30px;"></i> </a>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <p class="copyright"> Copyright © 2023 Florida Student Association of Mathematics</p>
+</footer>
+<script src="../js/jquery.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/slideshow.js"></script>
+
+  <script>
+    function currentSlide(n, container) {
+      const slides = container.getElementsByClassName("image-container");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slides[n - 1].classList.add("active");
+      updateDots(n, container);
+    }
+
+    function updateDots(n, container) {
+      const dots = container.nextElementSibling.getElementsByClassName("dot");
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+      dots[n - 1].classList.add("active");
+    }
+
+    function showSlides(container) {
+      const slides = container.getElementsByClassName("image-container");
+      let slideIndex = 1;
+      setInterval(function() {
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        currentSlide(slideIndex, container);
+      }, 3000);
+    }
+
+    document.querySelectorAll('.gallery-container').forEach(showSlides);
+  </script>
 </body>
 </html>
