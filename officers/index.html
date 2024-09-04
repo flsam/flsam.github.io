@@ -16,13 +16,40 @@
 		    margin: auto;
         	padding: auto;
         }
-        .officers-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
-            grid-gap: 24px;
-            margin: 0 auto;
-        }
-
+	.officers-grid {
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr); /* Default 3 columns */
+	    grid-gap: 24px;
+	    margin: 0 auto;
+	}
+	
+	/* Responsive adjustments for .officers-grid */
+	@media (max-width: 1024px) {
+	    .officers-grid {
+	        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+	    }
+	}
+	
+	@media (max-width: 600px) {
+	    .officers-grid {
+	        grid-template-columns: 1fr; /* 1 column on small screens */
+	    }
+	}
+	
+	.officers-grid2 {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr); /* Default 2 columns */
+	    grid-gap: 24px;
+	    margin: 0 auto;
+	}
+	
+	/* Responsive adjustments for .officers-grid2 */
+	@media (max-width: 600px) {
+	    .officers-grid2 {
+	        grid-template-columns: 1fr; /* 1 column on small screens */
+	    }
+	}
+		
         .officer {
             background-color: #ffffff;
             border-radius: 10px;
@@ -477,6 +504,8 @@
 			</p>
         </div>
 
+</div>
+<div class="officers-grid2">
         <!-- Officer 21 -->
         <div class="officer">
             <img class="officerimg" src="images/Luis_pic.jpeg" alt="Officer 21">
@@ -494,8 +523,7 @@
 				Joey Levenston is a Junior at American Heritage Palm Beach. He joined FAMAT in 9th grade and took the AMC route tests starting in 9th grade as well. He is passionate about learning new topics in math, as well as competing with his friends in competitions such as SMT online, Purple Comet, and the incredibly illustrious Cowconuts Math Meet. His favorite topic in math is geometry, with the glaring exception of angle chasing. In his free time, Joey likes going to the gym, listening to music, and SCUBA diving whenever he can. 
 			</p>
         </div>
-
-    </div>
+</div>
 </body>
     <br>
 	<br>
