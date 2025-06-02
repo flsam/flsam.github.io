@@ -249,31 +249,34 @@
     }
     .sponsor-container {
   display: flex;
-  flex-direction: column; /* Display logos in a column */
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
 .sponsor-logo {
-  display: inline-block;
-  margin-bottom: 20px; /* Adjust the margin between logos */
-  overflow: hidden;
-  border-radius: 15px; /* Adjust the border-radius as needed */
+  width: 200px; /* Set exact size for logo containers */
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--border-color);
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  background-color: white;
 }
 
 .sponsor-logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .sponsor-logo img {
-  width: 100%;
-  height: auto;
-  border: 4px solid var(--border-color);
-  border-radius: 15px; /* Adjust the border-radius as needed */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
 }
     </style>
 </head>
