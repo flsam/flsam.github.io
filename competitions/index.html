@@ -15,6 +15,10 @@
         margin: auto;
         padding: auto;
     }
+        body{
+        margin: auto;
+        padding: auto;
+    }
     footer * {
         margin: 0;
         padding: 0;
@@ -36,21 +40,24 @@
     footer p {
     margin: 0;
     padding: 0;
+    padding-right: 35px;
     font-size: 14px;
-}
+    }
+
     footer .row {
-        width: 85%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
+    width: 85%;
+    max-width: auto; /* Optional: limits row width on ultra-wide screens */
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     }
 
     footer .col {
-        flex-basis: 25%;
-        font-size: 12px;
+    flex-basis: 23%; /* ensures 4 columns fit in one row */
+    font-size: 12px;
     }
+
 
     footer .col:nth-child(2),
     footer .col:nth-child(3) {
@@ -206,6 +213,81 @@
             flex-basis: 100%;
         }
     }
+
+        /* Define the grid container */
+        .text-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Always three columns */
+            gap: 20px; /* Gap between grid items */
+        }
+
+        /* Style the grid items */
+        .text-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* Add curved edges */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+
+        /* Change the text color on hover */
+        .text-item:hover h2 {
+            color: #08D44C; /* Text color on hover */
+        }
+
+        /* Style the headings */
+        .text-item h2 {
+            margin: 0;
+            padding: 10px 0;
+            transition: color 0.3s; /* Smooth transition for text color */
+        }
+
+        /* Add some responsive design */
+        @media (max-width: 768px) {
+            .text-grid {
+                grid-template-columns: 1fr; /* Single column on small screens */
+            }
+        }
+            /* Style the invisible placeholder */
+        .empty-placeholder {
+        visibility: hidden;
+    }
+  .sponsor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sponsor-logo {
+  width: 400px; /* Adjust this to be double your previous width */
+  height: 200px; /* Maintain 2:1 ratio */
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+  background-color: white; /* Optional: gives consistent background for all logos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo:hover {
+  transform: scale(1.05);
+}
+
+.sponsor-logo img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border: 4px solid var(--border-color);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
     </style>
 </head>
 
@@ -292,14 +374,15 @@
 	<br>
 	<hr>
 <footer>
-    <div class="row">
+    <div class="row" style="gap: 20px;">
         <!--column one-->
         <div class="col">
             <img src="image (1).png" class="logo">
             <p>
-                FLSAM is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+                <b>FLSAM</b> is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
             </p>
         </div>
+
         <!--column two-->
         <div class="col">
             <h3 style="font-weight: bold;">Discord<div class="underline"><span></span></div></h3>
@@ -309,34 +392,49 @@
                 <button class="join-button">Join Server</button>
             </div>
         </div>
+
         <!--column three-->
         <div class="col">
             <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
             <ul>
-                <li style= "font-size: 16px; "> <b><a href="https://flsam.org/index.html">Home</a></b>
-                <li style="font-size: 16px">  <b><a href="https://flsam.org/meetings/index.html">Meetings</a></li></b>
-                <li style="font-size: 16px">  <b><a href="https://flsam.org/gallery/index.html">Gallery</a></li></b>
-                <li style="font-size: 16px">  <b><a href="https://flsam.org/downloads/index.html">Downloads</a></li></b>
-                <li style="font-size: 16px">  <b><a href="https://flsam.org/officers/index.html">Officers</a></li></b>
-                <li style="font-size: 16px">  <b><a href="https://flsam.org/competitions/index.html">Competitions</a></li></b>
-                <li style="font-size: 16px"> <b><a href="https://flsam.org/results/index.html">Results</a></li></b>
-		<li style="font-size: 16px"> <b><a href="https://flsam.org/Sponsors/index.html">Sponsors</a></li></b>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/index.html">Home</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/meetings/index.html">Meetings</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/gallery/index.html">Gallery</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/downloads/index.html">Downloads</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/officers/index.html">Officers</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/competitions/index.html">Competitions</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/results/index.html">Results</a></b></li>
+                <li style="font-size: 16px;"><b><a href="https://flsam.org/Sponsors/index.html">Sponsors</a></b></li>
             </ul>
         </div>
+
         <!--column four-->
         <div class="col">
             <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
             <div class="social-icons">
-                <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"> <i class="fab fa-twitter" style="font-size: 30px;"></i> </a>
-                <br>
-                <br>
-                <a href="https://www.facebook.com/florida.math/" target="_blank"> <i class="fab fa-facebook" style="font-size: 30px;"></i> </a>
-                <br>
-                <br>
-                <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"> <i class="fab fa-discord" style="font-size: 30px;"></i> </a>
+                <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"><i class="fab fa-twitter" style="font-size: 30px;"></i></a>
+                <br><br>
+                <a href="https://www.facebook.com/florida.math/" target="_blank"><i class="fab fa-facebook" style="font-size: 30px;"></i></a>
+                <br><br>
+                <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"><i class="fab fa-discord" style="font-size: 30px;"></i></a>
             </div>
         </div>
+
+        <!-- column five -->
+        <div class="col">
+            <h3 style="font-weight: bold;">Sponsors<div class="underline"><span></span></div></h3>
+            <div class="social-icons">
+                <a href="https://www.wolfram.com/?source=nav" target="_blank">
+                    <img src="yFsXVBYKemVsZdk2eepYw7n2ClJsJTIYr1Fo-C0EmC0-removebg-preview.png" alt="Wolfram Sponsor" class="sponsor-icon" style="width: 100px; margin-bottom: 20px;">
+                </a>
+                <a href="https://www.janestreet.com/puzzles/" target="_blank">
+                    <img src="JS_logo-d7838b558a1de6c51553426ab5a2bba474510c41c6a5e910a9e30524a32dec27.png" alt="Jane Street Sponsor" class="sponsor-icon" style="width: 100px;">
+                </a>
+            </div>
+        </div>
+
     </div>
+
     <hr>
     <p class="copyright"> Copyright © 2025 Florida Student Association of Mathematics</p>
 </footer>
