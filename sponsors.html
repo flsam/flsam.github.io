@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon (1).ico" type="">
+  <script src="https://kit.fontawesome.com/ca0d8e26e9.js"></script>
+
+  <title> FLSAM </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+<style>
+/* Scope everything under .flsam-sponsors to avoid collisions */
+.flsam-sponsors{ padding: 3rem 0 4rem; display:block !important; }
+.flsam-sponsors *{ box-sizing: border-box; }
+
+/* Header */
+.flsam-sponsors__header h1{
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  margin-bottom: .25rem;
+}
+.flsam-sponsors__sub{
+  color:#5f5f5f; margin:0 auto 1rem; max-width:820px;
+}
+
+/* Responsive grids (same widths for cards & spotlight) */
+.flsam-sponsors__grid,
+.flsam-sponsors__spotlight{
+  display: grid !important;              /* force grid even if something overrides */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Card */
+.flsam-sponsors__card{
+  position: relative; border-radius: 18px; background:#fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  border: 3px solid transparent; overflow: hidden;
+}
+.flsam-sponsors__card::before{
+  content:""; position:absolute; inset:0; border-radius:18px; padding:2px;
+  background:
+    linear-gradient(120deg, var(--accent,#1a73e8), transparent 40%),
+    linear-gradient(300deg, transparent 60%, var(--accent,#1a73e8));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity:.55; pointer-events:none;
+}
+.flsam-sponsors__link{
+  display:block; text-decoration:none; color:inherit;
+  padding: 1.1rem 1.2rem 1.25rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.flsam-sponsors__link:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0,0,0,.12);
+}
+
+/* BIG logo band – centered, never clipped */
+.flsam-sponsors__logo-band{
+  height: clamp(120px, 22vw, 160px);
+  background:#fff; border-radius:14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06) inset, 0 2px 6px rgba(0,0,0,.05);
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; padding:12px; margin-bottom:.7rem;
+}
+.flsam-sponsors__logo-band img{
+  max-width:100%; max-height:100%; object-fit:contain; display:block;
+}
+
+/* Text */
+.flsam-sponsors__name{
+  font-weight:800; font-size:1.1rem; margin:0 0 .25rem; text-align:center;
+}
+.flsam-sponsors__note{
+  color:#616161; font-size:.95rem; margin:0; text-align:center;
+}
+
+/* Spotlight */
+.flsam-spot__card{
+  background: linear-gradient(180deg, #ffffff, #fbfbff);
+  border: 1px solid #ececec; border-radius: 18px;
+  padding: 1.25rem; box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.flsam-spot__card h3{ font-size:1.1rem; margin-bottom:.25rem; }
+.flsam-spot__card p{ margin:0; color:#5a5a5a; }
+
+/* Mobile */
+@media (max-width:576px){
+  .flsam-sponsors{ padding-top:2rem; }
+}
+
+</style>
+</head>
+
+  <body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/flsam-header (1).png" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              FLSAM
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="meetings.html">Meetings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="downloads.html">Downloads</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="officers.html">Officers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="competitions.html">Competitions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="results.html">Results</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="sponsors.html">Sponsors</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="https://discord.com/invite/c8AfFP5e25" target="_blank" class="order_online">
+                Discord
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+<!-- ===== Sponsors Section (collision-proof) ===== -->
+<section class="flsam-sponsors">
+  <div class="container">
+    <header class="flsam-sponsors__header text-center">
+      <h1>Our Sponsors</h1>
+      <p class="flsam-sponsors__sub">
+        These organizations fuel problem-solving, teamwork, and opportunities for Florida students.
+        We’re grateful for their generous support.
+      </p>
+    </header>
+
+    <!-- Cards -->
+    <div class="flsam-sponsors__grid">
+      <!-- Wolfram -->
+      <div class="flsam-sponsors__card" style="--accent:#dd1100">
+        <a class="flsam-sponsors__link" href="https://www.wolfram.com/?source=nav" target="_blank" rel="noopener">
+          <div class="flsam-sponsors__logo-band">
+            <img src="images/wolfram-corporate-logo-horz-lg.png" alt="Wolfram" loading="lazy">
+          </div>
+          <h3 class="flsam-sponsors__name">Wolfram</h3>
+          <p class="flsam-sponsors__note">Supporting creative computation and math exploration.</p>
+        </a>
+      </div>
+
+      <!-- Jane Street -->
+      <div class="flsam-sponsors__card" style="--accent:#000000">
+        <a class="flsam-sponsors__link" href="https://www.janestreet.com/puzzles/" target="_blank" rel="noopener">
+          <div class="flsam-sponsors__logo-band">
+            <img src="images/IMG_2169-removebg-preview (2).png" alt="Jane Street" loading="lazy">
+          </div>
+          <h3 class="flsam-sponsors__name">Jane Street</h3>
+          <p class="flsam-sponsors__note">Championing problem solving and puzzle culture.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Appreciation -->
+    <div class="flsam-sponsors__spotlight">
+      <div class="flsam-spot__card">
+        <h3><i class="fa-solid fa-award"></i> Why their support matters</h3>
+        <p>Sponsor funding helps us host practices, travel to competitions, and provide materials for students across Florida.</p>
+      </div>
+      <div class="flsam-spot__card">
+        <h3><i class="fa-solid fa-people-group"></i> Students impacted</h3>
+        <p>Hundreds of students participate annually—gaining teamwork skills, leadership experience, and a love of mathematics.</p>
+      </div>
+      <div class="flsam-spot__card">
+        <h3><i class="fa-solid fa-handshake-angle"></i> Interested in sponsoring?</h3>
+        <p>We welcome partners who share our mission. Reach out via our contact page to learn about sponsorship tiers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== End Sponsors Section ===== -->
+
+
+
+
+  <!-- footer section -->
+  <footer>
+            <div class="row" style="gap: 20px;">
+        <!--column one-->
+        <div class="col">
+            <img src="images/image (1) (2).png" class="logo">
+            <p>
+                <b>FLSAM</b> is an organization of math competitors across the state of Florida who come together to focus on higher-level mathematics and train for contests. FLSAM has been active since 2003; it is currently incorporated and registered as a 501(c)(3).
+            </p>
+        </div>
+
+        <!--column three-->
+        <div class="col">
+            <h3 style="font-weight: bold;">Navigation<div class="underline"><span></span></div></h3>
+            <ul>
+                <li style="font-size: 16px;"><b><a href="index.html">Home</a></b></li>
+                <li style="font-size: 16px;"><b><a href="meetings.html">Meetings</a></b></li>
+                <li style="font-size: 16px;"><b><a href="gallery.html">Gallery</a></b></li>
+                <li style="font-size: 16px;"><b><a href="downloads.html">Downloads</a></b></li>
+                <li style="font-size: 16px;"><b><a href="officers.html">Officers</a></b></li>
+                <li style="font-size: 16px;"><b><a href="competitions.html">Competitions</a></b></li>
+                <li style="font-size: 16px;"><b><a href="results.html">Results</a></b></li>
+                <li style="font-size: 16px;"><b><a href="sponsors.html">Sponsors</a></b></li>
+            </ul>
+        </div>
+
+        <!--column four-->
+        <div class="col">
+            <h3 style="font-weight: bold;">Stay Connected<div class="underline"><span></span></div></h3>
+            <div class="social-icons">
+                <a href="https://twitter.com/i/flow/login?lang=en" target="_blank"><i class="fab fa-twitter" style="font-size: 30px;"></i></a>
+                <br><br>
+                <a href="https://www.facebook.com/florida.math/" target="_blank"><i class="fab fa-facebook" style="font-size: 30px;"></i></a>
+                <br><br>
+                <a href="https://discord.com/invite/c8AfFP5e25" target="_blank"><i class="fab fa-discord" style="font-size: 30px;"></i></a>
+            </div>
+        </div>
+
+        <!-- column five -->
+        <div class="col">
+            <h3 style="font-weight: bold;">Sponsors<div class="underline"><span></span></div></h3>
+            <div class="social-icons">
+                <a href="https://www.wolfram.com/?source=nav" target="_blank">
+                    <img src="images/yFsXVBYKemVsZdk2eepYw7n2ClJsJTIYr1Fo-C0EmC0-removebg-preview.png" alt="Wolfram Sponsor" class="sponsor-icon" style="width: 100px; margin-bottom: 20px;">
+                </a>
+                <a href="https://www.janestreet.com/puzzles/" target="_blank">
+                    <img src="images/JS_logo-d7838b558a1de6c51553426ab5a2bba474510c41c6a5e910a9e30524a32dec27.png" alt="Jane Street Sponsor" class="sponsor-icon" style="width: 100px;">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+        
+
+
+        <p class="copyright"> 
+          &copy; <span id="displayYear"></span>
+          <a >Florida Student Association of Mathematics</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const sec = document.querySelector('.flsam-sponsors');
+  if (!sec) return;
+  // Un-hide if some script toggled display/visibility
+  sec.hidden = false;
+  sec.style.removeProperty('display');
+  if (getComputedStyle(sec).display === 'none') sec.style.display = 'block';
+
+  // Also fix children that got display:none inline
+  sec.querySelectorAll('[style*="display:none"]').forEach(el => {
+    el.style.removeProperty('display');
+  });
+});
+</script>
+
+
+</body>
+
+</html>
