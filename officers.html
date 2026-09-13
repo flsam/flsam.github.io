@@ -110,7 +110,7 @@
       </ul>
 
       <div class="filters-content">
-        <div class="row grid">
+        <div class="officers_grid">
           <!-- Ashvin -->
           <div class="col-sm-6 col-lg-4 all other">
             <div class="box">
@@ -458,6 +458,32 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
+  <!-- officer filters (this grid is plain CSS grid, not isotope) -->
+  <script>
+    (function () {
+      var menu = document.querySelector('.filters_menu');
+      var grid = document.querySelector('.officers_grid');
+      if (!menu || !grid) return;
+
+      var cards = Array.prototype.slice.call(grid.querySelectorAll('.all'));
+
+      menu.addEventListener('click', function (e) {
+        var li = e.target.closest('li[data-filter]');
+        if (!li) return;
+
+        var filter = li.getAttribute('data-filter');
+
+        Array.prototype.forEach.call(menu.querySelectorAll('li'), function (item) {
+          item.classList.remove('active');
+        });
+        li.classList.add('active');
+
+        cards.forEach(function (card) {
+          card.hidden = filter !== '*' && !card.matches(filter);
+        });
+      });
+    })();
+  </script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>

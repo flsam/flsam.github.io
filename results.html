@@ -96,277 +96,463 @@
     <header class="dl-header">
       <h1>Competition Results</h1>
       <p class="dl-sub">
-        Here are the results from our amazing Florida teams! Select a year to view how we did at each competition.
+        Here are the results from our amazing Florida teams! Select a school year to view how we did at each competition.
       </p>
     </header>
 
-    <!-- Year pills -->
-    <div class="dl-year-pills" role="tablist" aria-label="Result years">
-      <button class="dl-pill active" data-year="2024" role="tab" aria-controls="panel-2024">2024</button>
-      <button class="dl-pill" data-year="2023" role="tab" aria-controls="panel-2023">2023</button>
-      <button class="dl-pill" data-year="2022" role="tab" aria-controls="panel-2022">2022</button>
-      <button class="dl-pill" data-year="2021" role="tab" aria-controls="panel-2021">2021</button>
-    </div>
+    <!-- Year selector (buttons on desktop, select on mobile) -->
+    <div class="dl-year-picker">
+      <div class="dl-year-pills" role="tablist" aria-label="Result years">
+        <button class="dl-pill active" data-year="2026" role="tab" aria-controls="panel-2026">2025-2026</button>
+        <button class="dl-pill" data-year="2025" role="tab" aria-controls="panel-2025">2024-2025</button>
+        <button class="dl-pill" data-year="2024" role="tab" aria-controls="panel-2024">2023-2024</button>
+        <button class="dl-pill" data-year="2023" role="tab" aria-controls="panel-2023">2022-2023</button>
+        <button class="dl-pill" data-year="2022" role="tab" aria-controls="panel-2022">2021-2022</button>
+        <button class="dl-pill" data-year="2021" role="tab" aria-controls="panel-2021">2020-2021</button>
+      </div>
 
       <!-- Mobile fallback -->
       <label class="dl-year-select-label" for="dl-year-select">Year</label>
       <select id="dl-year-select" class="dl-year-select" aria-label="Select year">
-        <option value="2024">2024</option>
-        <option value="2023">2023</option>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
+        <option value="2026">2025-2026</option>
+        <option value="2025">2024-2025</option>
+        <option value="2024">2023-2024</option>
+        <option value="2023">2022-2023</option>
+        <option value="2022">2021-2022</option>
+        <option value="2021">2020-2021</option>
       </select>
     </div>
 
     <!-- Panels -->
     <div class="dl-panels">
-      <!-- 2024 -->
+      <!-- 2025-2026 -->
+      <section id="panel-2026" class="dl-panel" role="tabpanel" aria-labelledby="year-2026">
+        <h2>2025-2026 Results</h2>
+        <div class="dl-cards res-cards">
+          <!-- 2026 CMIMC -->
+          <article class="dl-card res-card">
+            <h3>2026 CMIMC</h3>
+            <p class="res-intro">Congratulations to the Florida team that participated at CMIMC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra &amp; Number Theory: Aaryan Vaishya (20th), Ashvin Sinha (42nd)</li>
+                  <li>Geometry: Aaryan Vaishya (13th), Ashvin Sinha (24th), Jacob Khohayting (40th)</li>
+                  <li>Combinatorics: Ashvin Sinha (47th)</li>
+                  <li>Overall Individual: Ashvin Sinha (30th), Aaryan Vaishya (48th)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 2026 HMMT -->
+          <article class="dl-card res-card">
+            <h3>2026 HMMT</h3>
+            <p class="res-intro">Congratulations to the Florida team that participated at HMMT! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (5th)</li>
+                  <li>Team Round: Florida A (9th)</li>
+                  <li>Guts Round: Florida A (2nd)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra &amp; Number Theory: Benjamin Jiang (14th), Darsh Patel (37th)</li>
+                  <li>Geometry: Jacob Khohayting (6th), George Paret (23rd)</li>
+                  <li>Combinatorics: Ashvin Sinha (1st), Aaryan Vaishya (23rd)</li>
+                  <li>Overall Individual: Ashvin Sinha (20th), Benjamin Jiang (31st), Darsh Patel (40th), Aaryan Vaishya (45th)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 2025 PUMaC -->
+          <article class="dl-card res-card">
+            <h3>2025 PUMaC</h3>
+            <p class="res-intro">Congratulations to the two Florida teams that participated at PUMaC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (5th), Florida B (44th)</li>
+                  <li>Power Round: Florida A (4th), Florida B (41st)</li>
+                  <li>Team Round: Florida A (18th), Florida B (41st)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra: Darsh Patel (4th)</li>
+                  <li>Geometry: George Paret (9th), Jacob Khohayting (22nd), Joshua Khohayting (28th)</li>
+                  <li>Number Theory: Ashvin Sinha (6th), Darsh Patel (10th)</li>
+                  <li>Combinatorics: Aaryan Vaishya (11th)</li>
+                  <li>Overall Individual: Darsh Patel (9th), George Paret (40th), Ashvin Sinha (42nd)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2024-2025 -->
+      <section id="panel-2025" class="dl-panel" role="tabpanel" aria-labelledby="year-2025">
+        <h2>2024-2025 Results</h2>
+        <div class="dl-cards res-cards">
+          <!-- 2025 CMIMC -->
+          <article class="dl-card res-card">
+            <h3>2025 CMIMC</h3>
+            <p class="res-intro">Congratulations to the two Florida teams that participated at CMIMC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (6th), Florida B (34th)</li>
+                  <li>Team Round: Florida A (10th), Florida B (49th)</li>
+                  <li>TCS Round: Florida A (13th), Florida B (22nd)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra &amp; Number Theory: Aaryan Vaishya (4th), Aidan Quach (41st)</li>
+                  <li>Geometry: Jacob Khohayting (6th), Joshua Khohayting (17th)</li>
+                  <li>Combinatorics: Aaryan Vaishya (1st), Aidan Quach (35th)</li>
+                  <li>Overall Individual: Aaryan Vaishya (5th), Joshua Khohayting (39th), Aidan Quach (41st), Jacob Khohayting (47th)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 2025 HMMT -->
+          <article class="dl-card res-card">
+            <h3>2025 HMMT</h3>
+            <p class="res-intro">Congratulations to the two Florida teams that participated at HMMT! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (12th), Florida B (50th)</li>
+                  <li>Team Round: Florida A (50th)</li>
+                  <li>Guts Round: Florida A (18th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra &amp; Number Theory: Aaryan Vaishya (8th), Kevin Liu (9th), Darsh Patel (43rd)</li>
+                  <li>Geometry: Xuzhou Ren (23rd), Ashvin Sinha (23rd), Jacob Khohayting (23rd)</li>
+                  <li>Combinatorics: Benjamin Jiang (7th), Ashvin Sinha (11th)</li>
+                  <li>Overall Individual: Aaryan Vaishya (17th), Ashvin Sinha (18th), Kevin Liu (29th), Benjamin Jiang (34th)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 2024 PUMaC -->
+          <article class="dl-card res-card">
+            <h3>2024 PUMaC</h3>
+            <p class="res-intro">Congratulations to the two Florida teams that participated at PUMaC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (10th), Florida B (27th)</li>
+                  <li>Power Round: Florida A (15th), Florida B (27th)</li>
+                  <li>Team Round: Florida A (11th), Florida B (21st)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra: Darsh Patel (7th), Yusuf Shiekh (16th)</li>
+                  <li>Geometry: Andrew Xing (3rd), Jacob Khohayting (3rd), Xuzhou Ren (27th)</li>
+                  <li>Number Theory: Darsh Patel (21st)</li>
+                  <li>Combinatorics: Aaryan Vaishya (9th)</li>
+                  <li>Overall Individual: Darsh Patel (15th), Aaryan Vaishya (24th), Andrew Xing (39th), Jacob Khohayting (41st)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2023-2024 -->
       <section id="panel-2024" class="dl-panel" role="tabpanel" aria-labelledby="year-2024">
-        <h2>2024 Results</h2>
-        <div class="dl-cards">
+        <h2>2023-2024 Results</h2>
+        <div class="dl-cards res-cards">
           <!-- 2024 ARML -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2024 ARML</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the three teams that competed at ARML! Here's how they did:</b></div>
-              <p class="mb-1">ARML</p>
-              <ul>
-                <li>Sweepstakes: 1st place in region</li>
-              </ul>
-              <p class="mb-1">Super relay</p>
-              <ul>
-                <li>2nd place</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Rui Jiang — 11th place</li>
-              </ul>
+            <p class="res-intro">Congratulations to the three teams that competed at ARML! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: 1st place in region</li>
+                  <li>Super Relay: 2nd place</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Rui Jiang (11th)</li>
+                </ul>
+              </div>
             </div>
           </article>
-
           <!-- 2024 CMIMC -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2024 CMIMC</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the three teams that competed at CMIMC! Here's how they did:</b></div>
-              <p class="mb-1">CMIMC</p>
-              <ul>
-                <li>Integration Bee: Alex Li — 1st, Yusuf Sheikh — 2nd, Darsh Patel — 3rd, Andrew Xing — 5th</li>
-              </ul>
-              <p class="mb-1">Team Awards</p>
-              <ul>
-                <li>Team Round: Florida A — 2nd, Florida B — 16th, Florida C — 32nd</li>
-                <li>TCS: Florida B — 33rd, Florida C — 44th</li>
-                <li>Team Round: Florida A — 5th, Florida B — 27th, Florida C — 40th</li>
-                <li>Sweepstakes: Florida A — 8th, Florida B — 17th, Florida C — 38th</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Overall Individual: Aaron Hu — 4th, Darsh Patel — 17th, Alex Li — 21st, Andrew Xing — 23rd, Yusuf Sheikh — 40th</li>
-                <li>Algebra/NT: Darsh Patel — 3rd, Aaron Hu — 7th, Timothy Kong — 26th, Andrew Xing — 29th, Yusuf Sheikh — 33rd</li>
-                <li>Geometry: Aaron Hu — 6th, Alex Li — 33rd</li>
-                <li>Combinatorics: Andrew Xing — 9th, Yusuf Sheikh — 22nd, Alex Li — 27th</li>
-              </ul>
+            <p class="res-intro">Congratulations to the three teams that competed at CMIMC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (8th), Florida B (17th), Florida C (38th)</li>
+                  <li>Team Round: Florida A (2nd), Florida B (16th), Florida C (32nd)</li>
+                  <li>TCS Round: Florida B (33rd), Florida C (44th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Integration Bee: Alex Li (1st), Yusuf Sheikh (2nd), Darsh Patel (3rd), Andrew Xing (5th)</li>
+                  <li>Algebra/NT: Darsh Patel (3rd), Aaron Hu (7th), Timothy Kong (26th), Andrew Xing (29th), Yusuf Sheikh (33rd)</li>
+                  <li>Geometry: Aaron Hu (6th), Alex Li (33rd)</li>
+                  <li>Combinatorics: Andrew Xing (9th), Yusuf Sheikh (22nd), Alex Li (27th)</li>
+                  <li>Overall Individual: Aaron Hu (4th), Darsh Patel (17th), Alex Li (21st), Andrew Xing (23rd), Yusuf Sheikh (40th)</li>
+                </ul>
+              </div>
             </div>
           </article>
-
           <!-- 2024 HMMT -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2024 HMMT</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the one team that competed at HMMT! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards</p>
-              <ul>
-                <li>Sweepstakes: Florida A — 7th, Florida B — 24th</li>
-                <li>Guts: Florida A — 8th, Florida B — 20th</li>
-                <li>Team Round: Florida A — 16th, Florida B — 48th</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Integration Bee: Yusuf Sheikh — 1st, Kevin Liu — 2nd, Tom Zhang — 3rd</li>
-                <li>Overall Individual: Jessica Wan — 7th, Tom Zhang — 24th, Aaron Hu — 33rd</li>
-                <li>Algebra/NT: Yusuf Sheikh — 2nd, Aaron Hu — 5th, Aaryan Vaishya — 16th, Darsh Patel — 37th, Jessica Wan — 40th, Kevin Liu — 44th, Ashvin Sinha — 50th</li>
-                <li>Geometry: Tom Zhang — 1st, Jessica Wan — 2nd</li>
-                <li>Combinatorics: Benjamin Jiang — 33rd</li>
-              </ul>
+            <p class="res-intro">Congratulations to the teams that competed at HMMT! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: Florida A (7th), Florida B (24th)</li>
+                  <li>Team Round: Florida A (16th), Florida B (48th)</li>
+                  <li>Guts Round: Florida A (8th), Florida B (20th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Integration Bee: Yusuf Sheikh (1st), Kevin Liu (2nd), Tom Zhang (3rd)</li>
+                  <li>Algebra/NT: Yusuf Sheikh (2nd), Aaron Hu (5th), Aaryan Vaishya (16th), Darsh Patel (37th), Jessica Wan (40th), Kevin Liu (44th), Ashvin Sinha (50th)</li>
+                  <li>Geometry: Tom Zhang (1st), Jessica Wan (2nd)</li>
+                  <li>Combinatorics: Benjamin Jiang (33rd)</li>
+                  <li>Overall Individual: Jessica Wan (7th), Tom Zhang (24th), Aaron Hu (33rd)</li>
+                </ul>
+              </div>
             </div>
           </article>
-        </div>
-      </section>
-
-      <!-- 2023 -->
-      <section id="panel-2023" class="dl-panel" role="tabpanel" aria-labelledby="year-2023">
-        <h2>2023 Results</h2>
-        <div class="dl-cards">
           <!-- 2023 PUMaC -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2023 PUMaC</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the one Florida team who competed at PUMaC! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards (Division A)</p>
-              <ul>
-                <li>Overall: Florida A — 3rd, Florida B — 21st</li>
-                <li>Power Round: Florida A — 8th</li>
-                <li>Team Round: Florida A — 3rd, Florida B — 26th</li>
-              </ul>
-              <p class="mb-1">Individual Awards (Division A)</p>
-              <ul>
-                <li>Overall Individual: Aaron Hu — 5th, Darsh Patel — 22nd, Andrew Xing — 34th</li>
-                <li>Algebra: Aaron Hu — 8th, Darsh Patel — 8th, Yusuf Sheikh — 18th, William Li — 26th</li>
-                <li>Geometry: Aaron Hu — 1st, Yusuf Sheikh — 23rd</li>
-                <li>Combinatorics: Andrew Xing — 1st, Aaron Xiong — 25th</li>
-              </ul>
+            <p class="res-intro">Congratulations to the Florida teams who competed at PUMaC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards (Division A)</h4>
+                <ul>
+                  <li>Overall: Florida A (3rd), Florida B (21st)</li>
+                  <li>Power Round: Florida A (8th)</li>
+                  <li>Team Round: Florida A (3rd), Florida B (26th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards (Division A)</h4>
+                <ul>
+                  <li>Algebra: Aaron Hu (8th), Darsh Patel (8th), Yusuf Sheikh (18th), William Li (26th)</li>
+                  <li>Geometry: Aaron Hu (1st), Yusuf Sheikh (23rd)</li>
+                  <li>Combinatorics: Andrew Xing (1st), Aaron Xiong (25th)</li>
+                  <li>Overall Individual: Aaron Hu (5th), Darsh Patel (22nd), Andrew Xing (34th)</li>
+                </ul>
+              </div>
             </div>
           </article>
+        </div>
+      </section>
 
+      <!-- 2022-2023 -->
+      <section id="panel-2023" class="dl-panel" role="tabpanel" aria-labelledby="year-2023">
+        <h2>2022-2023 Results</h2>
+        <div class="dl-cards res-cards">
           <!-- 2023 ARML -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2023 ARML</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the Florida Alligators who competed at ARML! Here's how they did:</b></div>
-              <p class="mb-1">Individual Awards (Division A)</p>
-              <ul>
-                <li>Overall Individual: Aaron Hu — 12th</li>
-                <li>Overall Individual: Sharvaa Selvan — 16th</li>
-              </ul>
+            <p class="res-intro">Congratulations to the Florida Alligators who competed at ARML! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Individual Awards (Division A)</h4>
+                <ul>
+                  <li>Overall Individual: Aaron Hu (12th)</li>
+                  <li>Overall Individual: Sharvaa Selvan (16th)</li>
+                </ul>
+              </div>
             </div>
           </article>
-
-          <!-- 2023 CMIMC -->
-          <article class="dl-card">
-            <h3>2023 CMIMC</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the three teams that competed at CMIMC! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards</p>
-              <ul>
-                <li>Overall: Florida A — 3rd, Florida B — 25th, Florida C — 40th</li>
-                <li>TCS: Florida A — 14th, Florida B — 47th, Florida C — 55th</li>
-                <li>Team Round: Florida A — 5th, Florida B — 27th, Florida C — 40th</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Overall Individual: Karthik Vedula — 5th, Aaron Hu — 12th, Kevin Liu — 16th</li>
-                <li>Algebra/NT: Kevin Liu — 11th, Aaron Hu — 13th, Karthik Vedula — 15th, Tom Zhang — 39th</li>
-                <li>Geometry: Karthik Vedula — 2nd, Aaron Hu — 29th, Yuhan Niu — 40th, Alexander Li — 48th, Aaryan Vaishya — 49th</li>
-                <li>Combinatorics: Kevin Liu — 19th, Aaron Hu — 23rd, Karthik Vedula — 34th</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- 2023 HMMT -->
-          <article class="dl-card">
-            <h3>2023 HMMT</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the one team that competed at HMMT! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards</p>
-              <ul>
-                <li>Sweepstakes — 10th</li>
-                <li>Guts — 4th</li>
-                <li>Team Round — 16th</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Overall Individual: Jessica Wan — 4th, Alex Li — 17th, Karthik Vedula — 33rd</li>
-                <li>Algebra/NT: Karthik Vedula — 1st, Jessica Wan — 4th, Aaron Hu — 49th</li>
-                <li>Geometry: Alex Li — 27th</li>
-                <li>Combinatorics: Jessica Wan — 2nd, Alex Li — 5th</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- 2022 -->
-      <section id="panel-2022" class="dl-panel" role="tabpanel" aria-labelledby="year-2022">
-        <h2>2022 Results</h2>
-        <div class="dl-cards">
           <!-- 2022 PUMaC -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2022 PUMaC</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the one Florida team who competed at PUMaC! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards (Division A)</p>
-              <ul>
-                <li>Overall: Florida A — 14th</li>
-                <li>Power Round: Florida A — 16th</li>
-              </ul>
-              <p class="mb-1">Individual Awards (Division A)</p>
-              <ul>
-                <li>Overall Individual: Aaron Hu — 4th</li>
-                <li>Algebra: Aaron Hu — 1st, William Li — 24th</li>
-                <li>Geometry: Aaron Hu — 3rd</li>
-                <li>Number Theory: Rui Jiang — 25th</li>
-              </ul>
+            <p class="res-intro">Congratulations to the Florida team who competed at PUMaC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards (Division A)</h4>
+                <ul>
+                  <li>Overall: Florida A (14th)</li>
+                  <li>Power Round: Florida A (16th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards (Division A)</h4>
+                <ul>
+                  <li>Algebra: Aaron Hu (1st), William Li (24th)</li>
+                  <li>Geometry: Aaron Hu (3rd)</li>
+                  <li>Number Theory: Rui Jiang (25th)</li>
+                  <li>Overall Individual: Aaron Hu (4th)</li>
+                </ul>
+              </div>
             </div>
           </article>
+          <!-- 2023 CMIMC -->
+          <article class="dl-card res-card">
+            <h3>2023 CMIMC</h3>
+            <p class="res-intro">Congratulations to the three teams that competed at CMIMC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Overall: Florida A (3rd), Florida B (25th), Florida C (40th)</li>
+                  <li>Team Round: Florida A (5th), Florida B (27th), Florida C (40th)</li>
+                  <li>TCS Round: Florida A (14th), Florida B (47th), Florida C (55th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra/NT: Kevin Liu (11th), Aaron Hu (13th), Karthik Vedula (15th), Tom Zhang (39th)</li>
+                  <li>Geometry: Karthik Vedula (2nd), Aaron Hu (29th), Yuhan Niu (40th), Alexander Li (48th), Aaryan Vaishya (49th)</li>
+                  <li>Combinatorics: Kevin Liu (19th), Aaron Hu (23rd), Karthik Vedula (34th)</li>
+                  <li>Overall Individual: Karthik Vedula (5th), Aaron Hu (12th), Kevin Liu (16th)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <!-- 2023 HMMT -->
+          <article class="dl-card res-card">
+            <h3>2023 HMMT</h3>
+            <p class="res-intro">Congratulations to the team that competed at HMMT! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: 10th</li>
+                  <li>Team Round: 16th</li>
+                  <li>Guts Round: 4th</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra/NT: Karthik Vedula (1st), Jessica Wan (4th), Aaron Hu (49th)</li>
+                  <li>Geometry: Alex Li (27th)</li>
+                  <li>Combinatorics: Jessica Wan (2nd), Alex Li (5th)</li>
+                  <li>Overall Individual: Jessica Wan (4th), Alex Li (17th), Karthik Vedula (33rd)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
+      <!-- 2021-2022 -->
+      <section id="panel-2022" class="dl-panel" role="tabpanel" aria-labelledby="year-2022">
+        <h2>2021-2022 Results</h2>
+        <div class="dl-cards res-cards">
           <!-- 2022 ARML -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2022 ARML</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Two Florida Alligator teams competed offsite at the 2022 ARML! Some of their results included:</b></div>
-              <p class="mb-1">Team Awards (Division A)</p>
-              <ul>
-                <li>Overall: Florida A — 4th</li>
-                <li>Overall: Florida B — 13th</li>
-              </ul>
-              <p class="mb-1">Individual Awards (Division A)</p>
-              <ul>
-                <li>Kevin Liu — 3rd (won a $1000 prize)</li>
-                <li>Albert Wang — 8th (won a $500 prize)</li>
-              </ul>
+            <p class="res-intro">Two Florida Alligator teams competed offsite at the 2022 ARML! Some of their results included:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards (Division A)</h4>
+                <ul>
+                  <li>Overall: Florida A (4th)</li>
+                  <li>Overall: Florida B (13th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards (Division A)</h4>
+                <ul>
+                  <li>Kevin Liu (3rd, won a $1000 prize)</li>
+                  <li>Albert Wang (8th, won a $500 prize)</li>
+                </ul>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- 2021 -->
+      <!-- 2020-2021 -->
       <section id="panel-2021" class="dl-panel" role="tabpanel" aria-labelledby="year-2021">
-        <h2>2021 Results</h2>
-        <div class="dl-cards">
+        <h2>2020-2021 Results</h2>
+        <div class="dl-cards res-cards">
           <!-- 2021 PUMaC -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2021 PUMaC</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the two Florida teams who competed at PUMaC! Here's how they did:</b></div>
-              <p class="mb-1">Team Awards (Division A)</p>
-              <ul>
-                <li>Overall: Florida A — 14th</li>
-                <li>Power round: Florida A — 20th</li>
-                <li>Team round: Florida A — 5th, Florida B — 25th</li>
-              </ul>
-              <p class="mb-1">Individual Awards (Division A)</p>
-              <ul>
-                <li>Overall: Karthik Vedula — 7th, Divij Lankalapalli — 51st, Charley Cheng — 68th</li>
-                <li>Algebra: Divij Lankalapalli — 6th</li>
-                <li>Geometry: Karthik Vedula — 2nd, Albert Wang — 27th</li>
-                <li>Combinatorics: Charley Cheng — 9th, Albert Wang — 17th, Aaron Hu — 19th</li>
-              </ul>
+            <p class="res-intro">Congratulations to the two Florida teams who competed at PUMaC! Here&#39;s how they did:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards (Division A)</h4>
+                <ul>
+                  <li>Overall: Florida A (14th)</li>
+                  <li>Power Round: Florida A (20th)</li>
+                  <li>Team Round: Florida A (5th), Florida B (25th)</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards (Division A)</h4>
+                <ul>
+                  <li>Algebra: Divij Lankalapalli (6th)</li>
+                  <li>Geometry: Karthik Vedula (2nd), Albert Wang (27th)</li>
+                  <li>Combinatorics: Charley Cheng (9th), Albert Wang (17th), Aaron Hu (19th)</li>
+                  <li>Overall Individual: Karthik Vedula (7th), Divij Lankalapalli (51st), Charley Cheng (68th)</li>
+                </ul>
+              </div>
             </div>
           </article>
-
           <!-- 2021 HMMT -->
-          <article class="dl-card">
+          <article class="dl-card res-card">
             <h3>2021 HMMT</h3>
-            <div class="dl-links">
-              <div class="mb-2"><b>Congratulations to the Florida Alligators who competed at HMMT! Here are their accomplishments:</b></div>
-              <p class="mb-1">Overall Awards</p>
-              <ul>
-                <li>Overall — 8th of 100</li>
-                <li>Team Round — 8th</li>
-                <li>Guts Round — 10th</li>
-              </ul>
-              <p class="mb-1">Individual Awards</p>
-              <ul>
-                <li>Overall: Jessica Wan — 9th, Vismay Sharan — 24th, Karthik Vedula — 40th</li>
-                <li>Algebra/Number Theory: Jessica — 9th, Vismay — 15th</li>
-                <li>Geometry: Jessica &amp; Karthik — 4th, Vismay — 28th</li>
-                <li>Combinatorics: Jaedon Whyte — 23rd, Jessica — 33rd</li>
-              </ul>
+            <p class="res-intro">Congratulations to the Florida Alligators who competed at HMMT! Here are their accomplishments:</p>
+            <div class="res-groups">
+              <div class="res-group">
+                <h4>Team Awards</h4>
+                <ul>
+                  <li>Sweepstakes: 8th of 100</li>
+                  <li>Team Round: 8th</li>
+                  <li>Guts Round: 10th</li>
+                </ul>
+              </div>
+              <div class="res-group">
+                <h4>Individual Awards</h4>
+                <ul>
+                  <li>Algebra/Number Theory: Jessica Wan (9th), Vismay Sharan (15th)</li>
+                  <li>Geometry: Jessica Wan (4th), Karthik Vedula (4th), Vismay Sharan (28th)</li>
+                  <li>Combinatorics: Jaedon Whyte (23rd), Jessica Wan (33rd)</li>
+                  <li>Overall Individual: Jessica Wan (9th), Vismay Sharan (24th), Karthik Vedula (40th)</li>
+                </ul>
+              </div>
             </div>
           </article>
         </div>
       </section>
+
     </div>
   </section>
   <!-- footer section -->

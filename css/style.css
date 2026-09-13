@@ -134,6 +134,7 @@ a:focus {
 } 
 
 .bg-box img { 
+  display: block;
   height: 100%; 
   width:100%; 
   -o-object-fit: cover; 
@@ -175,26 +176,82 @@ a:focus {
   padding-left: 25px;
 }
 
+/* Once the nav expands, give it more room than the 960/1140px body container
+   so eight links plus the Discord button are never squeezed. */
+@media (min-width: 992px) {
+  .header_section .container {
+    max-width: min(100%, 1400px);
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+/* Tightest band: the nav has just expanded to eight links but the viewport is
+   still narrow, so trim type and padding to keep it on one uncut row. */
+@media (min-width: 992px) and (max-width: 1099.98px) {
+  .header_section .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .navbar-brand span {
+    font-size: 21px;
+  }
+
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 7px;
+    font-size: 11.5px;
+  }
+
+  .user_option a {
+    margin: 0 4px;
+  }
+
+  .user_option .order_online {
+    padding: 6px 13px;
+    font-size: 11.5px;
+    border-width: 1px;
+  }
+}
+
 .navbar-brand {
   font-family: 'Baloo 2';
 }
 
 .navbar-brand span {
   font-weight: bold;
-  font-size: 32px;
+  font-size: clamp(24px, 2.2vw, 32px);
   color: var(--white);
+  /* Keeps the wordmark legible where it crosses the light diagonal. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
 }
 
 .custom_nav-container {
   padding: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
+/* The nav is centred by Bootstrap's .mx-auto; a fixed padding-left on top of
+   that pushed the links past the container and clipped the last one. */
 .custom_nav-container .navbar-nav {
-  padding-left: 18%;
+  padding-left: 0;
+  min-width: 0;
+  /* Safety net: if the links ever outgrow the row they wrap to a second line
+     rather than spilling past the container and getting cut off. */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
+/* Fluid padding and type so all eight links fit between the 992px expand
+   breakpoint and the container width, instead of overflowing. */
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 5px 20px;
+  padding: 5px clamp(9px, 1.05vw, 18px);
+  font-size: clamp(12.5px, 1.02vw, 15px);
+  white-space: nowrap;
   color: var(--white);
   text-align: center;
   text-transform: uppercase;
@@ -282,19 +339,30 @@ a:focus {
   fill: var(--green-2);
 }
 
+/* Outlined rather than filled: --green on the green header bar was invisible,
+   and a solid white pill would read as the active-page link. */
 .user_option .order_online {
   display: inline-block;
-  padding: 8px 30px;
-  background-color: var(--green);
+  padding: 7px clamp(16px, 1.6vw, 26px);
+  /* Translucent dark fill rather than fully transparent: on the sub-page hero
+     the pill can land on the bright diagonal, where white-on-light would fail. */
+  background-color: rgba(0, 0, 0, .3);
   color: var(--white);
+  border: 2px solid var(--white);
   border-radius: 45px;
+  font-size: clamp(12.5px, 1.02vw, 15px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  white-space: nowrap;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  border: none;
 }
 
 .user_option .order_online:hover {
-  background-color: var(--green-2);
+  background-color: var(--white);
+  color: var(--green);
+  text-decoration: none;
 }
 
 .custom_nav-container .navbar-toggler {
@@ -356,83 +424,154 @@ a:focus {
 }
 
 /*end header section*/
-/* --- Keep slides small but still use Bootstrap's default behavior --- */
-.slider_section .carousel,
-.slider_section .carousel-inner,
-.slider_section .carousel-item {
-  min-height: 1000px;                 /* smaller than 520px; adjust as you like */
+
+/* ==========================================================================
+   Landing-page hero
+   The header art is a finished banner (its own wordmark, a diagonal wedge and
+   the state outline running to the edges), so nothing is layered on top of it.
+   The hero stacks instead: green nav bar, then the banner at its full width
+   and natural ratio, then the slider copy on green beneath it.
+   .hero_area is already a column flexbox, so `order` restacks the existing
+   markup without touching the HTML.
+   ========================================================================== */
+body:not(.sub_page) .hero_area {
+  background-color: var(--green);
 }
 
-/* VERY IMPORTANT: do NOT make items flex/static, etc. 
-   Ensure only ONE slide shows at a time like Bootstrap expects. */
-.slider_section .carousel-item { display: none; position: relative; }
+body:not(.sub_page) .header_section  { order: 1; }
+body:not(.sub_page) .bg-box          { order: 2; }
+body:not(.sub_page) .slider_section  { order: 3; }
+
+/* Banner: in the flow rather than an absolute backdrop, full bleed, no crop. */
+body:not(.sub_page) .bg-box {
+  position: static;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+body:not(.sub_page) .bg-box img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+/* --- Slider: a green copy band under the banner --- */
+.slider_section .carousel,
+.slider_section .carousel-inner {
+  min-height: 0;
+}
+
+/* Gutters so the prev/next arrows can never reach the text. */
+.slider_section .carousel-inner {
+  padding: 0 clamp(46px, 8%, 84px);
+}
+
+/* Hold a steady height so the band does not jump as slides change length. */
+.slider_section .carousel-item {
+  display: none;
+  position: relative;
+  min-height: clamp(230px, 22vw, 280px);
+}
+
 .slider_section .carousel-item.active,
 .slider_section .carousel-item-next,
 .slider_section .carousel-item-prev { display: block; }
 
-/* --- Caption box: lower, narrower, opaque --- */
+/* Caption sits in the flow now: no plate, no shadow, no overlap. */
 .slider_section .carousel-caption {
-  position: absolute;
-  bottom: 2%;                        /* lower on the slide (tweak 10–20%) */
-  left: 50%;
-  transform: translateX(-50%);        /* center horizontally */
-  width: min(88vw, 560px);            /* narrower box; change 560px as desired */
-  background: var(--overlay);  /* nearly solid/opaque */
+  position: static;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  width: min(100%, 680px);
+  margin: 0 auto;
+  padding: 42px 0 46px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
   color: var(--white);
-  border-radius: 16px;
-  padding: 26px 28px;
   text-align: center;
-  z-index: 2;
+}
+
+.slider_section .carousel-caption h1 {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.slider_section .carousel-caption p {
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.65;
+  margin: 0 auto 22px;
+  max-width: 60ch;
+  color: rgba(255, 255, 255, .88);
+}
+
+/* The slide links are bare anchors in the markup; make them read as buttons. */
+.slider_section .carousel-caption a {
+  display: inline-block;
+  padding: 11px 32px;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: background .2s ease, color .2s ease, -webkit-transform .2s ease;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.slider_section .carousel-caption a:hover,
+.slider_section .carousel-caption a:focus {
+  background: var(--green-tint);
+  color: var(--green);
+  text-decoration: none;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
   box-shadow: var(--shadow-2);
 }
 
-/* Tighter typography so the box stays compact */
-.slider_section .carousel-caption h1 { font-size: 2rem; margin: 0 0 8px; }
-.slider_section .carousel-caption p  { font-size: 14px; line-height: 1.45; margin: 0 0 10px; }
-.slider_section .carousel-caption .btn1 { padding: 8px 22px; font-size: 13px; border-radius: 999px; }
-
-/* Indicators as bars, aligned just below inside caption box */
-#flsamCarousel .carousel-indicators {
-  position: absolute;
-  bottom: calc(5% + 10px);           /* match caption bottom + a bit of gap */
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(88vw, 560px);           /* same as caption width */
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  z-index: 3;
+/* Arrows live in the gutters reserved above. */
+.slider_section .carousel-control-prev,
+.slider_section .carousel-control-next {
+  width: clamp(46px, 8%, 84px);
+  opacity: .55;
+  transition: opacity .2s ease;
 }
 
-#flsamCarousel .carousel-indicators li {
-  flex: 0 0 28px;                    /* bar width */
-  height: 6px;                       /* bar height */
-  border-radius: 3px;
-  background: var(--white);
-  opacity: .35;
-  transition: opacity .2s ease, transform .2s ease;
+.slider_section .carousel-control-prev:hover,
+.slider_section .carousel-control-next:hover {
+  opacity: 1;
 }
-
-#flsamCarousel .carousel-indicators li.active {
-  opacity: 1;                        /* bright when active */
-  transform: scaleY(1.3);            /* slightly taller */
-}
-
-
 
 /* --- Mobile tweaks --- */
 @media (max-width: 768px) {
-  .slider_section .carousel,
-  .slider_section .carousel-item { min-height: 380px; }
-  .slider_section .carousel-caption {
-    bottom: 10%;
-    width: min(92vw, 480px);
-    padding: 14px 16px;
+  .slider_section .carousel-inner {
+    padding: 0 40px;
   }
-  .slider_section .carousel-caption h1 { font-size: 1.7rem; }
-  .slider_section .carousel-caption p  { font-size: 13.5px; }
+
+  .slider_section .carousel-item {
+    min-height: 250px;
+  }
+
+  .slider_section .carousel-caption {
+    padding: 30px 0 34px;
+  }
+
+  .slider_section .carousel-caption p {
+    margin-bottom: 18px;
+  }
+
+  .slider_section .carousel-control-prev,
+  .slider_section .carousel-control-next {
+    width: 40px;
+  }
 }
 
 
@@ -540,6 +679,72 @@ a:focus {
 .food_section .filters_menu li.active {
   background-color: var(--green);
   color: var(--white);
+}
+
+/* ==========================================================================
+   Officers grid
+   Isotope laid the cards out masonry-style, so each one kept its own natural
+   height and the rows staggered. A CSS grid with 1fr rows sizes every row to
+   the tallest card instead, so all twelve match with no bio truncated.
+   ========================================================================== */
+.food_section .officers_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 25px;
+}
+
+/* The cells were Bootstrap columns; drop the gutter padding and let each one
+   stretch so the card inside can fill the full row height. */
+.food_section .officers_grid > .all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  max-width: none;
+  padding: 0;
+}
+
+.food_section .officers_grid > .all[hidden] {
+  display: none;
+}
+
+.food_section .officers_grid .box {
+  width: 100%;
+  margin-top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* The markup wraps the photo and the copy in a bare <div>. */
+.food_section .officers_grid .box > div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Photo panel stays a fixed band so every name sits on the same baseline; the
+   copy takes the remaining height. */
+.food_section .officers_grid .box .img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 215px;
+          flex: 0 0 215px;
+}
+
+.food_section .officers_grid .box .detail-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .food_section .box {
@@ -660,6 +865,13 @@ a:focus {
   align-content: center;
 }
 
+/* The slider band and this panel share the same green field, so a hairline and
+   a tighter top edge keep them reading as two sections instead of one long void. */
+body:not(.sub_page) .about_section {
+  padding-top: 58px;
+  border-top: 1px solid var(--line-inverse);
+}
+
 .about_section .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -689,7 +901,10 @@ a:focus {
 }
 
 .about_section .detail-box a {
-  color: var(--green-2);
+  /* --green-2 sits almost invisibly on the --green panel; go light instead. */
+  color: var(--green-tint);
+  text-decoration: underline;
+  text-underline-offset: 3px;
   align-content: center;
 }
 
@@ -1392,29 +1607,13 @@ a:focus {
   transition: transform .4s ease;
 }
 
-/* Hover overlay + zoom */
-.gallery-item::after {
-  content: "View";
-  position: absolute;
-  inset: auto 10px 10px auto;
-  background: var(--green);
-  color: var(--white);
-  font-size: .85rem;
-  padding: 6px 10px;
-  border-radius: 999px;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: .25s ease;
+/* Hover zoom */
+.gallery-item > a {
+  display: block;
+  position: relative;
+  line-height: 0;
 }
 .gallery-item:hover img { transform: scale(1.04); }
-.gallery-item:hover::after { opacity: 1; transform: translateY(0); }
-
-/* Caption */
-.gallery-item figcaption {
-  padding: 10px 12px 12px;
-  font-size: .9rem;
-  color: var(--ink);
-}
 
 /* Breakpoints */
 @media (max-width: 1100px) {
@@ -1539,6 +1738,25 @@ a:focus {
       border-radius:10px
     }
     .dl-cards{grid-template-columns:1fr}
+  }
+
+  /* Results page: stacked, full-width cards */
+  .dl-cards.res-cards{grid-template-columns:1fr;gap:18px}
+  .res-card{padding:18px 20px}
+  .res-card h3{
+    font-size:1.25rem;color:var(--green);margin:0 0 6px;
+    padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+  .res-intro{margin:0 0 14px;color:var(--ink-2);font-weight:600}
+  .res-groups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 32px}
+  .res-group h4{
+    margin:0 0 6px;font-size:.8rem;font-weight:800;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink-2);
+  }
+  .res-group ul{margin:0;padding-left:20px}
+  .res-group li{margin-bottom:4px;line-height:1.45}
+  @media (max-width: 760px){
+    .res-groups{grid-template-columns:1fr;gap:16px}
   }
   @keyframes fade{from{opacity:.6;transform:translateY(2px)}to{opacity:1;transform:none}}
 
